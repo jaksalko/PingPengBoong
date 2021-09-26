@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <UserInfo>
+    <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+    <boong>6600</boong>
+    <heart>5</heart>
+    <candy>0</candy>
+    <skin_powder>0</skin_powder>
+    <block_powder>0</block_powder>
+    <heart_time>600</heart_time>
+    <log_out>2021-09-26 15:21:02</log_out>
+    <skin_a>0</skin_a>
+    <skin_b>1</skin_b>
+    <profile_skin>0</profile_skin>
+    <profile_style />
+    <facebook_token />
+  </UserInfo>
+  <UserHistory>
+    <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+    <play_time>0</play_time>
+    <boong_get>450</boong_get>
+    <boong_use>0</boong_use>
+    <heart_get>0</heart_get>
+    <heart_use>0</heart_use>
+    <editor_make>0</editor_make>
+    <editor_clear>0</editor_clear>
+    <editor_fail>0</editor_fail>
+    <stage_clear>24</stage_clear>
+    <stage_fail>0</stage_fail>
+    <drops>0</drops>
+    <crash>0</crash>
+    <carry>0</carry>
+    <reset>0</reset>
+    <move>0</move>
+    <snow>0</snow>
+    <parfait>0</parfait>
+    <crack>0</crack>
+    <cloud>0</cloud>
+  </UserHistory>
+  <UserReward />
+  <UserStage>
+    <UserStage>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <stage_name>튜토리얼(1)</stage_name>
+      <stage_star>3</stage_star>
+      <stage_move>1</stage_move>
+      <stage_clear_time>2021-09-26 15:21:17</stage_clear_time>
+    </UserStage>
+    <UserStage>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <stage_name>튜토리얼(2)</stage_name>
+      <stage_star>3</stage_star>
+      <stage_move>6</stage_move>
+      <stage_clear_time>2021-09-26 15:21:34</stage_clear_time>
+    </UserStage>
+    <UserStage>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <stage_name>튜토리얼(3)</stage_name>
+      <stage_star>3</stage_star>
+      <stage_move>3</stage_move>
+      <stage_clear_time>2021-09-26 15:21:44</stage_clear_time>
+    </UserStage>
+    <UserStage>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <stage_name>튜토리얼(4)</stage_name>
+      <stage_star>2</stage_star>
+      <stage_move>10</stage_move>
+      <stage_clear_time>2021-09-26 15:21:57</stage_clear_time>
+    </UserStage>
+    <UserStage>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <stage_name>튜토리얼(5)</stage_name>
+      <stage_star>2</stage_star>
+      <stage_move>15</stage_move>
+      <stage_clear_time>2021-09-26 15:22:23</stage_clear_time>
+    </UserStage>
+    <UserStage>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <stage_name>튜토리얼(6)</stage_name>
+      <stage_star>3</stage_star>
+      <stage_move>3</stage_move>
+      <stage_clear_time>2021-09-26 15:22:33</stage_clear_time>
+    </UserStage>
+    <UserStage>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <stage_name>시작</stage_name>
+      <stage_star>3</stage_star>
+      <stage_move>8</stage_move>
+      <stage_clear_time>2021-09-26 15:22:49</stage_clear_time>
+    </UserStage>
+    <UserStage>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <stage_name>청소부</stage_name>
+      <stage_star>2</stage_star>
+      <stage_move>16</stage_move>
+      <stage_clear_time>2021-09-26 15:23:06</stage_clear_time>
+    </UserStage>
+    <UserStage>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <stage_name>눈쓸기</stage_name>
+      <stage_star>2</stage_star>
+      <stage_move>26</stage_move>
+      <stage_clear_time>2021-09-26 15:23:27</stage_clear_time>
+    </UserStage>
+    <UserStage>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <stage_name>교차로</stage_name>
+      <stage_star>3</stage_star>
+      <stage_move>21</stage_move>
+      <stage_clear_time>2021-09-26 15:23:46</stage_clear_time>
+    </UserStage>
+    <UserStage>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <stage_name>파르페</stage_name>
+      <stage_star>3</stage_star>
+      <stage_move>6</stage_move>
+      <stage_clear_time>2021-09-26 17:29:02</stage_clear_time>
+    </UserStage>
+    <UserStage>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <stage_name>릴렉스체어</stage_name>
+      <stage_star>2</stage_star>
+      <stage_move>13</stage_move>
+      <stage_clear_time>2021-09-26 17:29:21</stage_clear_time>
+    </UserStage>
+    <UserStage>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <stage_name>구덩이</stage_name>
+      <stage_star>3</stage_star>
+      <stage_move>19</stage_move>
+      <stage_clear_time>2021-09-26 17:29:48</stage_clear_time>
+    </UserStage>
+    <UserStage>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <stage_name>마시멜로이야기</stage_name>
+      <stage_star>2</stage_star>
+      <stage_move>15</stage_move>
+      <stage_clear_time>2021-09-26 17:30:10</stage_clear_time>
+    </UserStage>
+    <UserStage>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <stage_name>크래커</stage_name>
+      <stage_star>3</stage_star>
+      <stage_move>3</stage_move>
+      <stage_clear_time>2021-09-26 18:07:01</stage_clear_time>
+    </UserStage>
+    <UserStage>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <stage_name>부실한다리</stage_name>
+      <stage_star>3</stage_star>
+      <stage_move>9</stage_move>
+      <stage_clear_time>2021-09-26 18:07:31</stage_clear_time>
+    </UserStage>
+    <UserStage>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <stage_name>사방치기</stage_name>
+      <stage_star>3</stage_star>
+      <stage_move>9</stage_move>
+      <stage_clear_time>2021-09-26 18:08:02</stage_clear_time>
+    </UserStage>
+    <UserStage>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <stage_name>크레바스</stage_name>
+      <stage_star>2</stage_star>
+      <stage_move>18</stage_move>
+      <stage_clear_time>2021-09-26 18:08:37</stage_clear_time>
+    </UserStage>
+    <UserStage>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <stage_name>바람길</stage_name>
+      <stage_star>3</stage_star>
+      <stage_move>4</stage_move>
+      <stage_clear_time>2021-09-26 18:08:52</stage_clear_time>
+    </UserStage>
+    <UserStage>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <stage_name>소용돌이</stage_name>
+      <stage_star>3</stage_star>
+      <stage_move>5</stage_move>
+      <stage_clear_time>2021-09-26 18:09:03</stage_clear_time>
+    </UserStage>
+  </UserStage>
+  <UserInventory>
+    <UserInventory>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <item_name>초코 펭귄</item_name>
+      <time_get>2021-09-26 15:21:02</time_get>
+    </UserInventory>
+    <UserInventory>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <item_name>딸기 펭귄</item_name>
+      <time_get>2021-09-26 15:21:02</time_get>
+    </UserInventory>
+  </UserInventory>
+  <UserQuest>
+    <UserQuest>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <quest_number>1</quest_number>
+      <quest_state>4</quest_state>
+      <quest_clear_time>2021-09-26 15:21:07</quest_clear_time>
+    </UserQuest>
+    <UserQuest>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <quest_number>2</quest_number>
+      <quest_state>4</quest_state>
+      <quest_clear_time>2021-09-26 15:21:09</quest_clear_time>
+    </UserQuest>
+    <UserQuest>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <quest_number>6</quest_number>
+      <quest_state>4</quest_state>
+      <quest_clear_time>2021-09-26 15:21:15</quest_clear_time>
+    </UserQuest>
+    <UserQuest>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <quest_number>3</quest_number>
+      <quest_state>2</quest_state>
+      <quest_clear_time>2021-09-26 15:22:33</quest_clear_time>
+    </UserQuest>
+    <UserQuest>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <quest_number>7</quest_number>
+      <quest_state>4</quest_state>
+      <quest_clear_time>2021-09-26 15:22:33</quest_clear_time>
+    </UserQuest>
+    <UserQuest>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <quest_number>8</quest_number>
+      <quest_state>4</quest_state>
+      <quest_clear_time>2021-09-26 15:23:46</quest_clear_time>
+    </UserQuest>
+    <UserQuest>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <quest_number>9</quest_number>
+      <quest_state>4</quest_state>
+      <quest_clear_time>2021-09-26 17:30:10</quest_clear_time>
+    </UserQuest>
+    <UserQuest>
+      <nickname>26A81A73-A6AC-58EB-8F4C-6CFA4AB0AC84</nickname>
+      <quest_number>10</quest_number>
+      <quest_state>2</quest_state>
+      <quest_clear_time>2021-09-26 18:08:37</quest_clear_time>
+    </UserQuest>
+  </UserQuest>
+</Database>

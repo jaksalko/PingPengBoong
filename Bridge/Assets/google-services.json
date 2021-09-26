@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "434788789674",
+    "project_id": "pingpengboong",
+    "storage_bucket": "pingpengboong.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434788789674:android:6fad0dd39f7534e5eacfd3",
+        "android_client_info": {
+          "package_name": "com.project99.PingPengBooong"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "434788789674-1phechv5cq9vr247id9r72e4k26cb15f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAN4BX8Wl3-ZUdDxi0krQP4ZTGHsYGxVtY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "434788789674-1phechv5cq9vr247id9r72e4k26cb15f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "434788789674-maq2u1frnum47li52mju855kvsktgh8q.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.project99.ppb"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

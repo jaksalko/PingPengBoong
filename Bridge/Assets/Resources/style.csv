@@ -1,0 +1,13 @@
+﻿style_info,style_text,type,condition,standard,reward_boong,reward_heart,reward_item
+나는 청소왕,청소왕,userHistory,snow,500,3000,0,none
+마지막?,푸르딩딩한,userInfo,current_stage,85,5000,0,none
+디저트 메이커,스윗한,userInfo,current_stage,26,500,0,none
+퍼펙트 파르페,퍼펙트한,userHistory,parfait,10,3000,0,none
+손님 여기서 이러시면,재빠른,userHistory,cracker,1,500,0,none
+우당탕탕탕,강인한,userHistory,cracker,50,3000,0,none
+장인 정신,재주있는,userHistory,editor_make,10,1000,0,none
+트레져 헌터,섬세한,userHistory,editor_clear,10,1000,0,none
+부자 되세요,풍족한,userHistory,boong_get,10000,3000,0,none
+옷장이 부족해,맵시나는,userInventory,skin_count,10,5000,0,none
+환영합니다!,초보자,userInfo,current_stage,1,500,0,none
+Just for you,러블리,userHistory,crash,10,0,4,none
