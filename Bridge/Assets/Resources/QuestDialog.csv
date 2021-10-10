@@ -1,128 +1,129 @@
-﻿number,speaker,emotion,line
-1,ping,smile,안녕! 나는 핑이라고 해.
-1,peng,expressionless,나는 펭.
-1,ping,smile,네가 우리와 함께 디저트 월드를 청소하는 친구구나! 이름이….
-1,peng,expressionless,@. 반가워.
-1,ping,embarrassed,펭! 먼저 인사하는 게 어딨어! 같이 하기로 했잖아!
-1,ping,embarrassed,"반, 반가워 @!"
-1,peng,expressionless,빨리 일을 시작하도록 할까.
-1,ping,cute,"잠깐만, 잠깐만! @에게 설명 먼저 하고!"
-1,ping,cute,"너무 급해, 펭!"
-1,peng,stare,"네가 너무 느린 거겠지, 핑."
-1,ping,embarrassed,끄응…
-1,ping,cute,@! 앞으로 우리의 일을 도우려면
-1,ping,cute,여기서 할 일을 참고하면 돼!
-1,peng,expressionless,"설명을 다시 듣고 싶으면 여기서 다시 볼 수 있으니까, 걱정 말고."
-1,ping,smile,그럼 일을 시작하기 전에! 어떻게 하는 지 배워볼까?
-1,peng,stare,(누가 누굴 가르친다는 거지)
-1,ping,smile,@! 로비에 중앙의 섬을 터치해봐!
-,,,
-2,ping,smile,어서 와 @!
-2,peng,expressionless,조금 늦었지만… 빨리 설명할 게.
-2,ping,smile,펭! 너무 급하다구!
-2,ping,smile,@! 여기선 앞으로 우리가 일할 섬들을 볼 수 있어.
-2,peng,expressionless,"할 일이 많지만, 그 만큼 붕을 많이 벌 수 있지."
-2,ping,embarrassed,"(그, 그래도 생각보다 너무 많지 않나..?)"
-2,peng,stare,(그만큼 붕을 더 많이 준다는 거 아니겠니)
-2,ping,cute,맞아! 붕 많이 벌어서 부자 되고 싶다!
-2,ping,smile,@! 어서 ‘몽글망글 마쉬멜로우 빌리지’!로 출발하자!
-2,peng,stare,"핑, 설명은 해야지."
-2,peng,stare,‘몽글망글 마쉬멜로우 빌리지’는 우리의 고향이야.
-2,ping,cute,응! 여기서는 기초를 배울 수 있지!
-2,ping,cute,"꼼꼼하게 배우고, 출발하자구 @!"
-2,peng,expressionless,첫 스테이지를 터치해봐.
-,,,
-7,ping,smile,"수고했어, @!"
-7,peng,expressionless,생각보다 잘해서 놀랐어.
-7,ping,smile,바로 일을 하러 가볼까?
-7,ping,smile,어디보자… ‘베리베리베리 아이스크림 힐즈’!
-7,peng,expressionless,핑크 아이스크림 언덕이 잔뜩 있는
-7,peng,expressionless,피크닉 명소로 유명한 곳이야.
-7,ping,cute,피크닉 가고 싶다~!
-7,ping,cute,설탕 눈보라가 쌓이기 전에 많이 갔었는데!
-7,peng,stare,"핑, 지금 우린 일을 하러 온 거라구."
-7,ping,cute,우왓! 아이스크림 언덕이 엄청 푹신푹신해!
-7,ping,cute,"헤헤헤 뒹구니까 기분 좋다. 달짝지근하구, 푹신푹신하구!"
-7,peng,angry,일하러 온 거라니까 핑.
-7,ping,cute,노곤해… 잠에 들 것 같아…
-7,peng,angry,핑? 잠든 거 아니지?
-7,peng,angry,핑???
-7,ping,smile,"헤헤헤, 음냐음냐…"
-7,peng,angry,일어나 핑!!!
-,,,
-8,ping,smile,여긴 ‘트로피카나 파르페 리조트’!
-8,ping,smile,휴양지로 유명한 곳이지!
-8,ping,embarrassed,어? 그런데 펭이 어디갔지?
-8,ping,embarrassed,방금까지 여기 있었는데?
-8,peng,expressionless,코코넛 나무 그늘… 해먹… 최고다…
-8,peng,expressionless,휴가로 온 게 아니라는 것만 빼면…
-8,ping,embarrassed,펭!!! 어디있어?
-8,peng,expressionless,여기야 핑. 어디서 날 찾고 있는 거야.
-8,ping,cute,펭! 다행이야. 없어진 줄 알았다구.
-8,peng,stare,(조금 더 쉴 수 있었는데…)
-8,ping,smile,펭! 여긴 파르페가 유명하대!
-8,ping,smile,얼른 파르페 먹으러 가자!
-8,peng,stare,"뒤를 봐, 핑."
-8,peng,stare,여기 파르페 재료가 다 얼어버렸다구.
-8,ping,embarrassed,"어, 어떻게 하지?"
-8,ping,embarrassed,파르페 못 먹는 거야?
-8,peng,expressionless,순서에 맞게 제대로 모으면 된다는데.
-8,ping,embarrassed,순서에 맞게?
-8,peng,expressionless,컵 ▶ 아이스크림 ▶ 시럽 ▶ 과일 순서야.
-8,ping,cute,너무 어렵다. 나는 암기가 제일 싫어!
-8,peng,expressionless,걱정하지 마. 위에 순서를 표기해줄 게.
-8,ping,smile,"그렇구나! @, 청소를 시작해 볼까!"
-,,,
-9,ping,smile,펭! 지금 그 쪽으로 갈게! 기다려!
-9,peng,angry,조심해 핑! 바닥이 무너질 것 같아!
-9,ping,embarrassed,"뭐, 뭐라고?"
-9,ping,embarrassed,"으, 으아아악! 떨어질 뻔 했어!"
-9,peng,stare,휴.. 크래커 도서관은 워낙 오래된 곳이라
-9,peng,stare,바닥이 무너질 수도 있어.
-9,peng,stare,조심히 다니자.
-9,ping,embarrassed,큰일날 뻔 했네!
-9,ping,embarrassed,어디가 위험한 지는 어떻게 알아?
-9,peng,expressionless,바닥을 잘 보고 다녀야지
-9,peng,expressionless,크래커로 된 바닥 모양을 잘 보면 돼
-9,ping,smile,정말이네! 금이 잔뜩 간 크래커 바닥이 있어!
-9,peng,expressionless,부서지기 전까지 지나갈 수 있을 거야.
-9,peng,expressionless,무너지더라도 걱정하진 마. 잘 보면 떨어지진 않을 거야.
-9,ping,smile,"응, 다행이네!"
-9,ping,smile,"바닥이 무너지면, 더 이상 지나갈 수 없다!"
-9,ping,smile,"알았지, @! 조심해서 다니자!"
-,,,
-10,ping,embarrassed,으아아아아아!
-10,ping,embarrassed,"여어기, 바라암이 너어무 강해애!!"
-10,peng,angry,"얼른 뭐라도 붙잡아, 핑!"
-10,ping,embarrassed,"흐아아, 너무 어지러워"
-10,ping,embarrassed,바람에 휩쓸려서 날아갔네
-10,peng,stare,마쉬멜로우 펭귄도 날 수 있다는 걸 보여주다니
-10,peng,stare,대단한걸 핑.
-10,ping,cute,그래? 나 난 거야?
-10,ping,cute,"헤헤, 대단한 걸?"
-10,peng,stare,"날았다기보단, 날라간 거지."
-10,peng,expressionless,여긴 바람이 대단해서
-10,peng,expressionless,잘못하면 원치 않는 곳까지 날아갈 것 같아.
-10,ping,smile,솜사탕 섬이라서 폭신 달콤할 줄만 알았는데.
-10,ping,smile,"바람이 불다니, 완전 반전인걸!"
-10,peng,stare,"누구처럼 날라가지 않게, 조심해서 다니자."
-10,peng,stare,어디까지나 일하러 온 거니까.
-10,ping,cute,"응! @, 조심해서 다니자!"
-,,,
-11,ping,cute,"별사탕 광산에 가보자, @!"
-11,peng,stare,깜짝이야. 제대로 설명 해야지 핑.
-11,ping,cute,별사탕 광산을 발견했어!
-11,ping,cute,"별사탕을 많이 캐서, 붕으로 바꿔서! 나는 부자가 될 테야!"
-11,peng,stare,알아들을 수 없다니깐.
-11,peng,stare,"@, 여러 사람들과 함께 놀 수 있는 별사탕 광산을 발견했어."
-11,ping,cute,부자… 별사탕… 많이…
-11,ping,cute,헤헤…
-11,peng,stare,…
-11,peng,expressionless,다른 사람들이 만든 스테이지를 해볼 수도 있고
-11,peng,expressionless,직접 스테이지를 만들어볼 수도 있어.
-11,ping,cute,그리고 보상을 잔뜩 얻을 수도 있지!
-11,peng,expressionless,…그래. 열심히 일을 하는 보람도 느끼고 말이야.
-11,peng,expressionless,여러 사람들과 교류하고…
-11,ping,cute,부자도 되고!
-11,ping,cute,"기다려라, 별사탕 광산! 미래의 부자, 핑이 간다구!"
-11,ping,cute,별사탕 광산 갈끄니까아!
+﻿number,speaker,emotion,line,,,,,,,#description
+int,string,string,string,,,,,,,string
+1,ping,smile,안녕! 나는 핑이라고 해.,,,,,,,문경아 이거는 팝업에 그거야
+1,peng,expressionless,나는 펭.,,,,,,,
+1,ping,smile,네가 우리와 함께 디저트 월드를 청소하는 친구구나! 이름이….,,,,,,,
+1,peng,expressionless,@. 반가워.,,,,,,,
+1,ping,embarrassed,펭! 먼저 인사하는 게 어딨어! 같이 하기로 했잖아!,,,,,,,
+1,ping,embarrassed,"반, 반가워 @!",,,,,,,
+1,peng,expressionless,빨리 일을 시작하도록 할까.,,,,,,,
+1,ping,cute,"잠깐만, 잠깐만! @에게 설명 먼저 하고!",,,,,,,
+1,ping,cute,"너무 급해, 펭!",,,,,,,
+1,peng,stare,"네가 너무 느린 거겠지, 핑.",,,,,,,
+1,ping,embarrassed,끄응…,,,,,,,
+1,ping,cute,@! 앞으로 우리의 일을 도우려면,,,,,,,
+1,ping,cute,여기서 할 일을 참고하면 돼!,,,,,,,
+1,peng,expressionless,"설명을 다시 듣고 싶으면 여기서 다시 볼 수 있으니까, 걱정 말고.",,,,,,,
+1,ping,smile,그럼 일을 시작하기 전에! 어떻게 하는 지 배워볼까?,,,,,,,
+1,peng,stare,(누가 누굴 가르친다는 거지),,,,,,,
+1,ping,smile,@! 로비에 중앙의 섬을 터치해봐!,,,,,,,
+,,,,,,,,,,
+2,ping,smile,어서 와 @!,,,,,,,
+2,peng,expressionless,조금 늦었지만… 빨리 설명할 게.,,,,,,,
+2,ping,smile,펭! 너무 급하다구!,,,,,,,
+2,ping,smile,@! 여기선 앞으로 우리가 일할 섬들을 볼 수 있어.,,,,,,,
+2,peng,expressionless,"할 일이 많지만, 그 만큼 붕을 많이 벌 수 있지.",,,,,,,
+2,ping,embarrassed,"(그, 그래도 생각보다 너무 많지 않나..?)",,,,,,,
+2,peng,stare,(그만큼 붕을 더 많이 준다는 거 아니겠니),,,,,,,
+2,ping,cute,맞아! 붕 많이 벌어서 부자 되고 싶다!,,,,,,,
+2,ping,smile,@! 어서 ‘몽글망글 마쉬멜로우 빌리지’!로 출발하자!,,,,,,,
+2,peng,stare,"핑, 설명은 해야지.",,,,,,,
+2,peng,stare,‘몽글망글 마쉬멜로우 빌리지’는 우리의 고향이야.,,,,,,,
+2,ping,cute,응! 여기서는 기초를 배울 수 있지!,,,,,,,
+2,ping,cute,"꼼꼼하게 배우고, 출발하자구 @!",,,,,,,
+2,peng,expressionless,첫 스테이지를 터치해봐.,,,,,,,
+,,,,,,,,,,
+7,ping,smile,"수고했어, @!",,,,,,,
+7,peng,expressionless,생각보다 잘해서 놀랐어.,,,,,,,
+7,ping,smile,바로 일을 하러 가볼까?,,,,,,,
+7,ping,smile,어디보자… ‘베리베리베리 아이스크림 힐즈’!,,,,,,,
+7,peng,expressionless,핑크 아이스크림 언덕이 잔뜩 있는,,,,,,,
+7,peng,expressionless,피크닉 명소로 유명한 곳이야.,,,,,,,
+7,ping,cute,피크닉 가고 싶다~!,,,,,,,
+7,ping,cute,설탕 눈보라가 쌓이기 전에 많이 갔었는데!,,,,,,,
+7,peng,stare,"핑, 지금 우린 일을 하러 온 거라구.",,,,,,,
+7,ping,cute,우왓! 아이스크림 언덕이 엄청 푹신푹신해!,,,,,,,
+7,ping,cute,"헤헤헤 뒹구니까 기분 좋다. 달짝지근하구, 푹신푹신하구!",,,,,,,
+7,peng,angry,일하러 온 거라니까 핑.,,,,,,,
+7,ping,cute,노곤해… 잠에 들 것 같아…,,,,,,,
+7,peng,angry,핑? 잠든 거 아니지?,,,,,,,
+7,peng,angry,핑???,,,,,,,
+7,ping,smile,"헤헤헤, 음냐음냐…",,,,,,,
+7,peng,angry,일어나 핑!!!,,,,,,,
+,,,,,,,,,,
+8,ping,smile,여긴 ‘트로피카나 파르페 리조트’!,,,,,,,
+8,ping,smile,휴양지로 유명한 곳이지!,,,,,,,
+8,ping,embarrassed,어? 그런데 펭이 어디갔지?,,,,,,,
+8,ping,embarrassed,방금까지 여기 있었는데?,,,,,,,
+8,peng,expressionless,코코넛 나무 그늘… 해먹… 최고다…,,,,,,,
+8,peng,expressionless,휴가로 온 게 아니라는 것만 빼면…,,,,,,,
+8,ping,embarrassed,펭!!! 어디있어?,,,,,,,
+8,peng,expressionless,여기야 핑. 어디서 날 찾고 있는 거야.,,,,,,,
+8,ping,cute,펭! 다행이야. 없어진 줄 알았다구.,,,,,,,
+8,peng,stare,(조금 더 쉴 수 있었는데…),,,,,,,
+8,ping,smile,펭! 여긴 파르페가 유명하대!,,,,,,,
+8,ping,smile,얼른 파르페 먹으러 가자!,,,,,,,
+8,peng,stare,"뒤를 봐, 핑.",,,,,,,
+8,peng,stare,여기 파르페 재료가 다 얼어버렸다구.,,,,,,,
+8,ping,embarrassed,"어, 어떻게 하지?",,,,,,,
+8,ping,embarrassed,파르페 못 먹는 거야?,,,,,,,
+8,peng,expressionless,순서에 맞게 제대로 모으면 된다는데.,,,,,,,
+8,ping,embarrassed,순서에 맞게?,,,,,,,
+8,peng,expressionless,컵 ▶ 아이스크림 ▶ 시럽 ▶ 과일 순서야.,,,,,,,
+8,ping,cute,너무 어렵다. 나는 암기가 제일 싫어!,,,,,,,
+8,peng,expressionless,걱정하지 마. 위에 순서를 표기해줄 게.,,,,,,,
+8,ping,smile,"그렇구나! @, 청소를 시작해 볼까!",,,,,,,
+,,,,,,,,,,
+9,ping,smile,펭! 지금 그 쪽으로 갈게! 기다려!,,,,,,,
+9,peng,angry,조심해 핑! 바닥이 무너질 것 같아!,,,,,,,
+9,ping,embarrassed,"뭐, 뭐라고?",,,,,,,
+9,ping,embarrassed,"으, 으아아악! 떨어질 뻔 했어!",,,,,,,
+9,peng,stare,휴.. 크래커 도서관은 워낙 오래된 곳이라,,,,,,,
+9,peng,stare,바닥이 무너질 수도 있어.,,,,,,,
+9,peng,stare,조심히 다니자.,,,,,,,
+9,ping,embarrassed,큰일날 뻔 했네!,,,,,,,
+9,ping,embarrassed,어디가 위험한 지는 어떻게 알아?,,,,,,,
+9,peng,expressionless,바닥을 잘 보고 다녀야지,,,,,,,
+9,peng,expressionless,크래커로 된 바닥 모양을 잘 보면 돼,,,,,,,
+9,ping,smile,정말이네! 금이 잔뜩 간 크래커 바닥이 있어!,,,,,,,
+9,peng,expressionless,부서지기 전까지 지나갈 수 있을 거야.,,,,,,,
+9,peng,expressionless,무너지더라도 걱정하진 마. 잘 보면 떨어지진 않을 거야.,,,,,,,
+9,ping,smile,"응, 다행이네!",,,,,,,
+9,ping,smile,"바닥이 무너지면, 더 이상 지나갈 수 없다!",,,,,,,
+9,ping,smile,"알았지, @! 조심해서 다니자!",,,,,,,
+,,,,,,,,,,
+10,ping,embarrassed,으아아아아아!,,,,,,,
+10,ping,embarrassed,"여어기, 바라암이 너어무 강해애!!",,,,,,,
+10,peng,angry,"얼른 뭐라도 붙잡아, 핑!",,,,,,,
+10,ping,embarrassed,"흐아아, 너무 어지러워",,,,,,,
+10,ping,embarrassed,바람에 휩쓸려서 날아갔네,,,,,,,
+10,peng,stare,마쉬멜로우 펭귄도 날 수 있다는 걸 보여주다니,,,,,,,
+10,peng,stare,대단한걸 핑.,,,,,,,
+10,ping,cute,그래? 나 난 거야?,,,,,,,
+10,ping,cute,"헤헤, 대단한 걸?",,,,,,,
+10,peng,stare,"날았다기보단, 날라간 거지.",,,,,,,
+10,peng,expressionless,여긴 바람이 대단해서,,,,,,,
+10,peng,expressionless,잘못하면 원치 않는 곳까지 날아갈 것 같아.,,,,,,,
+10,ping,smile,솜사탕 섬이라서 폭신 달콤할 줄만 알았는데.,,,,,,,
+10,ping,smile,"바람이 불다니, 완전 반전인걸!",,,,,,,
+10,peng,stare,"누구처럼 날라가지 않게, 조심해서 다니자.",,,,,,,
+10,peng,stare,어디까지나 일하러 온 거니까.,,,,,,,
+10,ping,cute,"응! @, 조심해서 다니자!",,,,,,,
+,,,,,,,,,,
+11,ping,cute,"별사탕 광산에 가보자, @!",,,,,,,
+11,peng,stare,깜짝이야. 제대로 설명 해야지 핑.,,,,,,,
+11,ping,cute,별사탕 광산을 발견했어!,,,,,,,
+11,ping,cute,"별사탕을 많이 캐서, 붕으로 바꿔서! 나는 부자가 될 테야!",,,,,,,
+11,peng,stare,알아들을 수 없다니깐.,,,,,,,
+11,peng,stare,"@, 여러 사람들과 함께 놀 수 있는 별사탕 광산을 발견했어.",,,,,,,
+11,ping,cute,부자… 별사탕… 많이…,,,,,,,
+11,ping,cute,헤헤…,,,,,,,
+11,peng,stare,…,,,,,,,
+11,peng,expressionless,다른 사람들이 만든 스테이지를 해볼 수도 있고,,,,,,,
+11,peng,expressionless,직접 스테이지를 만들어볼 수도 있어.,,,,,,,
+11,ping,cute,그리고 보상을 잔뜩 얻을 수도 있지!,,,,,,,
+11,peng,expressionless,…그래. 열심히 일을 하는 보람도 느끼고 말이야.,,,,,,,
+11,peng,expressionless,여러 사람들과 교류하고…,,,,,,,
+11,ping,cute,부자도 되고!,,,,,,,
+11,ping,cute,"기다려라, 별사탕 광산! 미래의 부자, 핑이 간다구!",,,,,,,
+11,ping,cute,별사탕 광산 갈끄니까아!,,,,,,,

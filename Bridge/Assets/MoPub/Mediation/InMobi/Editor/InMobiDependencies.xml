@@ -1,0 +1,11 @@
+<!-- WARNING: File modified by script.  Keep all tags with a mopub-key attribute to a single line. -->
+<dependencies>
+  <androidPackages>
+    <androidPackage spec="com.mopub.mediation:inmobi:9.2.1.1" mopub-key="ANDROID_ADAPTER_VERSION"/>
+    <androidPackage spec="com.inmobi.monetization:inmobi-ads:9.2.1" mopub-key="ANDROID_SDK_VERSION"/>
+
+  </androidPackages>
+  <iosPods>
+    <iosPod name="MoPub-InMobiMonetization-Adapters" subspecs="['Network']" minTargetSdk="8.0" version="9.2.1.1" mopub-key="IOS_ADAPTER_VERSION"/>
+  </iosPods>
+</dependencies>

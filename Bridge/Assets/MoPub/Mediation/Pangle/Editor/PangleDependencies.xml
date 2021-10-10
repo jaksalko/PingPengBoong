@@ -1,0 +1,13 @@
+<!-- WARNING: File modified by script.  Keep all tags with a mopub-key attribute to a single line. -->
+<dependencies>
+ <androidPackages>
+   <androidPackage spec="com.mopub.mediation:pangle:3.9.0.5.0" mopub-key="ANDROID_ADAPTER_VERSION"/>
+   <androidPackage spec="com.pangle.global:ads-sdk:3.9.0.5" mopub-key="ANDROID_SDK_VERSION"/>
+   <repositories>
+       <repository>https://artifact.bytedance.com/repository/pangle</repository>
+   </repositories>
+ </androidPackages>
+ <iosPods>
+   <iosPod name="MoPub-Pangle-Adapters" subspecs="['Network']" minTargetSdk="8.0" version="3.9.0.4.0" mopub-key="IOS_ADAPTER_VERSION"/>
+ </iosPods>
+</dependencies>

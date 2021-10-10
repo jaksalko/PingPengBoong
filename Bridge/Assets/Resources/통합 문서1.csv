@@ -1,0 +1,7 @@
+﻿idx,name_key,image,price,island,level,slot
+int,string,string,int ,int 1:아이스크림 2:파르페 ...,int : 스테이지 레벨,int : 0-4
+1,icecream_corn,icecream_cron_deco,1000,1,10,0
+2,icecream_chair,icecream_chair_deco,1000,1,15,1
+3,icecream_window,icecream_window_deco,1000,1,20,2
+4,icecream_bed,icecream_bed_deco,1000,1,25,3
+5,icecream_shelf,icecream_shelf_deco,1000,1,30,4

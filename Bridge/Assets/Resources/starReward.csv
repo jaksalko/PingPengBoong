@@ -1,4 +1,5 @@
 ﻿island,level,boong,heart,block_powder,skin_powder,item
+int,int,int,int,int,int,string
 0,0,1000,3,0,0,none
 0,1,2000,5,0,0,none
 0,2,3000,5,0,0,none
