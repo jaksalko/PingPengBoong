@@ -119,10 +119,10 @@ internal class MoPubUnityEditorAdUnit : MoPubAdUnit
         return _requested;
     }
 
-    internal override List<MoPub.RewardData> GetAvailableRewards()
+    internal override List<MoPub.Reward> GetAvailableRewards()
     {
         CheckAdUnitRequested();
-        return new List<MoPub.RewardData>();
+        return new List<MoPub.Reward>();
     }
 
     internal override void ShowRewardedVideo(string customData)
@@ -139,7 +139,7 @@ internal class MoPubUnityEditorAdUnit : MoPubAdUnit
         });
     }
 
-    internal override void SelectReward(MoPub.RewardData selectedReward)
+    internal override void SelectReward(MoPub.Reward selectedReward)
     {
         if (CheckAdUnitRequested())
             SelectedReward = selectedReward;

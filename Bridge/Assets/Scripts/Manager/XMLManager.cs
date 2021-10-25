@@ -252,15 +252,17 @@ public class Database
 
     [XmlArray("UserQuest")]
     public List<UserQuest> userQuests;
+
+    [XmlArray("UserRoom")]
+    public List<UserRoom> userRooms;
     //[XmlArray("UserFriend")]
     //public List<UserFriend> userFriend = new List<UserFriend>();
 
     //EditorMap
 
+    //첫시작 또는 스테이지 클리어 
     public void SyncWithCSV()
     {
-        CSVManager csvManager = CSVManager.instance;
-
         foreach (var clearStage in userStage)
         {
             using(var e = CSVManager.stageData.GetInfoEnumerator())
@@ -297,7 +299,7 @@ public class Database
                 while (e.MoveNext())
                 {
                     var data = e.Current.Value;
-                    if (data.skinName == userInventory[i].item_name)
+                    if (data.key == userInventory[i].itemIdx)
                     {
                         data.inPossession = true;
                         data.skin_get_time = DateTime.ParseExact(userInventory[i].time_get, "yyyy-MM-dd HH:mm:ss", null);
@@ -322,8 +324,15 @@ public class Database
         userInfo = new UserInfo(SystemInfo.deviceUniqueIdentifier , null);
         userHistory = new UserHistory(SystemInfo.deviceUniqueIdentifier);
 
-        userInventory.Add(new UserInventory(SystemInfo.deviceUniqueIdentifier, CSVManager.skinData.GetInfo(1).skinName));
-        userInventory.Add(new UserInventory(SystemInfo.deviceUniqueIdentifier, CSVManager.skinData.GetInfo(2).skinName));
+        userInventory.Add(new UserInventory(SystemInfo.deviceUniqueIdentifier, 1,CSVManager.skinData.GetInfo(1).skinName));
+        userInventory.Add(new UserInventory(SystemInfo.deviceUniqueIdentifier, 2,CSVManager.skinData.GetInfo(2).skinName));
+
+        userRooms.Add(new UserRoom(1, true, 0, 0, 0, 0, 0));
+        userRooms.Add(new UserRoom(2, true, 0, 0, 0, 0, 0));
+        userRooms.Add(new UserRoom(3, true, 0, 0, 0, 0, 0));
+        userRooms.Add(new UserRoom(4, true, 0, 0, 0, 0, 0));
+        userRooms.Add(new UserRoom(5, true, 0, 0, 0, 0, 0));
+
         XMLManager.ins.SaveItems();
     }
 

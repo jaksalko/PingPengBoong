@@ -1,53 +1,53 @@
 ﻿type,name,info,boong,block_powder,skin_powder,path,island,stage,slot
 string,string,string,int,int,int,string,int,int,int
-skin,초코 펭귄,머리 위에 초코 시럽을 잔뜩 뿌린 마쉬멜로우 펭귄이다.,4000,99999999,150,c1,-1,-1,-1
-skin,딸기 펭귄,머리 위에 딸기 시럽을 잔뜩 뿌린 마쉬멜로우 펭귄이다.,4000,99999999,150,c2,-1,-1,-1
-skin,블루베리 펭귄,블루베리 시럽 덕분에 다른 펭귄들 보다 시력이 약간 더 좋다.,4000,99999999,150,c3,-1,-1,-1
-skin,바나나 펭귄,바나나는 원래 하얗지만 펭귄에게 그런 사실은 중요하지 않다.,4000,99999999,150,c4,-1,-1,-1
-skin,멜론 펭귄,어딘가 다녀올 일이 생기면 올 때 멜론 펭귄을 챙기는 것이 암묵적 룰인 듯하다.,4000,99999999,150,c5,-1,-1,-1
-skin,포도 펭귄,"포도를 잔뜩 먹은 다음 날, 온 몸이 물들었다.",4000,99999999,150,c6,-1,-1,-1
-skin,바닐라 펭귄,닐라닐라바닐라 라는 멋들어진 별명을 기대한 듯 했다.,4000,99999999,150,c7,-1,-1,-1
-skin,쑥 펭귄,건강에만 좋은 줄 알았던 쑥이 이렇게 맛있어 보일 수도 있다는 사실!,4000,99999999,150,c8,-1,-1,-1
-skin,당근 펭귄,싱싱한 당근색 덕분에 가끔씩은 토끼들에게 노려진다고 한다.,4000,99999999,150,c9,-1,-1,-1
-skin,가지 펭귄,가지를 싫어하는 사람에게도 어필할 수 있을 날을 바라고 있다.,4000,99999999,150,c10,-1,-1,-1
-skin,민트 초코 펭귄,"누구나 좋아한다는 소문에 민트 시럽을 뿌렸지만, 누군가는 좋아하지 않았다.",6000,99999999,220,b1,-1,-1,-1
-skin,수박 펭귄,아이스 랜드의 여름 축제에서 인기있는 코스튬. 사실 부끄러워서 빨개진 것이다.,6000,99999999,220,b2,-1,-1,-1
-skin,레고 펭귄,밟으면 아플 것 같다. 위에 업히는 펭귄은 조금 망설인다고 한다.,6000,99999999,220,b3,-1,-1,-1
-skin,음매 펭귄,펭귄으로서의 정체성은 포기하지 않았다. 우유맛 크림을 돋보이게 하고 싶었을 뿐이다.,6000,99999999,220,b4,-1,-1,-1
-skin,버섯 펭귄,오랫동안 씻지 않았더니 그만 버섯이 되어버렸다. 씻으면 원래대로 돌아온다.,6000,99999999,220,b5,-1,-1,-1
-skin,아포가토 펭귄,언젠가 연어 초밥 펭귄과 멋들어진 브런치 콤비를 결성하고 싶어한다.,6000,99999999,220,b6,-1,-1,-1
-skin,연어 초밥 펭귄,사르르 녹는 연어를 머리에 얹고 와사비에 부리를 콕 찍어 연어 초밥 완성!,6000,99999999,220,b7,-1,-1,-1
-skin,지구 펭귄,지구는 둥그니까 자꾸 걸어나가면 디저트 월드에 도착할 것이다.,6000,99999999,220,b8,-1,-1,-1
-skin,좀비 펭귄,으에웨 으어우웨 어억.,10000,99999999,400,a1,-1,-1,-1
-skin,천사 펭귄,"친하게 지내야 될 것 같지만, 사실 엄청나게 성격이 더럽다고 한다.",10000,99999999,400,a2,-1,-1,-1
-skin,악마 펭귄,"친하게 지내면 안 될 것 같지만, 사실 엄청나게 착하다고 한다.",10000,99999999,400,a3,-1,-1,-1
-skin,해리포터 펭귄,슈가르디움 레비오우사. 날고 싶은 펭귄들이 종종 빗자루를 타곤 한다.,10000,99999999,400,a4,-1,-1,-1
-skin,무성희극인 펭귄,....(조용하다. 말을 걸어도 대답하지 않는다.),10000,99999999,400,a5,-1,-1,-1
-skin,꿀벌 펭귄,꿀을 채취할 때 꿀벌에게 들키지 않기 위해 변장을 한다. 가끔 엉덩이를 씰룩이며 춤을 춘다.,10000,99999999,400,a6,-1,-1,-1
-skin,벚꽃 펭귄,아이스크림 힐즈에서 베리를 따먹으며 피크닉을 즐기면 행복해진다.,99999999,99999999,400,s1,-1,-1,-1
-skin,하와이안 펭귄,"마쉬멜로우 펭귄들은 청소를 끝낸 후, 파르페 리조트에서 휴식을 즐기기를 좋아한다.",99999999,99999999,400,s2,-1,-1,-1
-skin,사서 펭귄,크래커 도서관에서 떠들고 있으면 어디선가 스윽 나타나 주의를 준다고 한다.,99999999,99999999,400,s3,-1,-1,-1
-skin,삐에로 펭귄,"솜사탕 성에서 파티가 열릴 때면, 솜사탕 머리와 베리 코를 가진 삐에로가 나타난다.",99999999,99999999,400,s4,-1,-1,-1
-room,아이스크림 장식품,-1,1000,99999999,99999999,icecream_corn_deco,2,10,0
-room,파인트와 소파,-1,1000,99999999,99999999,icecream_chair_deco,2,15,1
-room,딸기향 커튼 창문,-1,1000,99999999,99999999,icecream_window_deco,2,20,2
-room,피크닉 침대,-1,1000,99999999,99999999,icecream_bed_deco,2,25,3
-room,피크닉 추억 선반,-1,1000,99999999,99999999,icecream_shelf_deco,2,30,4
-room,파르페 장식품,-1,1000,99999999,99999999,parfait_ornament_deco,3,10,0
-room,젤리 구명튜브,-1,1000,99999999,99999999,parfait_tube_deco,3,15,1
-room,설탕 뿌린 분재,-1,1000,99999999,99999999,parfait_plant_deco,3,20,2
-room,민트향 소파,-1,1000,99999999,99999999,parfait_sofa_deco,3,25,3
-room,민트 초코 출입문,-1,1000,99999999,99999999,parfait_door_deco,3,30,4
-room,쿠키 꾸러미,-1,1000,99999999,99999999,cracker_bundle_deco,4,10,0
-room,지하 계단,-1,1000,99999999,99999999,cracker_stair_deco,4,15,1
-room,도서관 책장,-1,1000,99999999,99999999,cracker_shelf_deco,4,20,2
-room,쿠키 망원경,-1,1000,99999999,99999999,cracker_telescope_deco,4,25,3
-room,쿠키 우주 포스터,-1,1000,99999999,99999999,cracker_poster_deco,4,30,4
-room,도넛 장식품,-1,1000,99999999,99999999,cottoncandy_ornament_deco,5,10,0
-room,솜사탕 화단,-1,1000,99999999,99999999,cottoncandy_garden_deco,5,15,1
-room,솜사탕 바구니,-1,1000,99999999,99999999,cottoncandy_basker_deco,5,20,2
-room,솜사탕 나무,-1,1000,99999999,99999999,cottoncandy_bench_deco,5,25,3
-room,바람개비 선반,-1,1000,99999999,99999999,cottoncandy_shelf_deco,5,30,4
+skin,Chocolate penguin,It is a marshmallow penguin drizzled with a lot of chocolate syrup over its head.,4000,99999999,150,c1,-1,-1,-1
+skin,Straberry penguin,It is a marshmallow penguin drizzled with a lot of strawberry syrup over its head.,4000,99999999,150,c2,-1,-1,-1
+skin,Blueberry penguin,Its eyesight is slightly better than other penguins because of blueberry syrup.,4000,99999999,150,c3,-1,-1,-1
+skin,Banana penguin,"A banana is originally white, but that doesn’t matter to it.",4000,99999999,150,c4,-1,-1,-1
+skin,Melon penguin,It is an implicit rule to bring a Melon Penguin when you come back.,4000,99999999,150,c5,-1,-1,-1
+skin,Grape penguin,"After the day when it ate a lot of grapes, its whole body was covered with purple.",4000,99999999,150,c6,-1,-1,-1
+skin,Vanila penguin,"It seems to be expected to have a wonderful nickname, Nilla Nilla Vanilla.",4000,99999999,150,c7,-1,-1,-1
+skin,Broccoli penguin,The fact that broccoli is not only good for your health but also look delicious!,4000,99999999,150,c8,-1,-1,-1
+skin,Carrot penguin,It is sometimes targeted by rabbits because of its fresh carrot color.,4000,99999999,150,c9,-1,-1,-1
+skin,Eggplant penguin,It waits for a day when it can appeal to those who hate eggplant. ,4000,99999999,150,c10,-1,-1,-1
+skin,Mint chocolate penguin,"It hasn’t washed for a long time, so it became a mushroom. However, it will return to its original state by taking a shower.",6000,99999999,220,b1,-1,-1,-1
+skin,Watermelon penguin,"It is a popular costume at Ice Land’s summer festival. Actually, it turns red because it is shy.",6000,99999999,220,b2,-1,-1,-1
+skin,LEGO penguin,It will hurt if you step on it. Another penguin which rides on its top hesitates a little.,6000,99999999,220,b3,-1,-1,-1
+skin,Milk penguin,It doesn’t give up identification as a penguin. It just wants to make the milk-flavored cream stand out.  ,6000,99999999,220,b4,-1,-1,-1
+skin,Mushroom penguin,"Mint syrup is drizzled because of a rumor that everyone like it, but someone doesn’t. ",6000,99999999,220,b5,-1,-1,-1
+skin,Avocado penguin,Someday it wants to be nice brunch duo with Salmon Sushi Penguin.,6000,99999999,220,b6,-1,-1,-1
+skin,Salmon sushi penguin,"Put the softly melting salmon on its head, dip its beak in wasabi, and then complete the salmon sushi!  ",6000,99999999,220,b7,-1,-1,-1
+skin,Earth penguin,"The earth is round, so if you keep going forward you will arrive at the dessert world. ",6000,99999999,220,b8,-1,-1,-1
+skin,Zombie penguin,Growl….Growl… Growl…. ,10000,99999999,400,a1,-1,-1,-1
+skin,Angel penguin,"It seems to be kind like an angel, but it is actually very bad. ",10000,99999999,400,a2,-1,-1,-1
+skin,Devil penguin,"It seems to be bad like a devil, but it is actually very kind. ",10000,99999999,400,a3,-1,-1,-1
+skin,Wizard penguin,Sugardium Leviosa. Penguins which want to fly often used to ride a broom. ,10000,99999999,400,a4,-1,-1,-1
+skin,Charlie penguin,….(Quite. It doesn’t answer when somebody talk to it.),10000,99999999,400,a5,-1,-1,-1
+skin,Honeybee penguin,"To harvest honey, it dresses up like a honeybee. Sometimes it dances with swaying its hips.",10000,99999999,400,a6,-1,-1,-1
+skin,Cherry blossom penguin,It feels happy to enjoy a picnic and pick berries at the Ice Cream Hills.,99999999,99999999,400,s1,-1,-1,-1
+skin,Hawaiian penguin,"After marshmallow penguins clean up, they enjoy taking a break at the Parfait Resort.",99999999,99999999,400,s2,-1,-1,-1
+skin,Librarian penguin,"When you make a noise in the Cracker Library, somewhere it appears quietly and warn you.",99999999,99999999,400,s3,-1,-1,-1
+skin,Pierrot penguin,"When a party is held at the Cotton Candy Castle, a clown with cotton candy hair and a berry nose appears. ",99999999,99999999,400,s4,-1,-1,-1
+room,Ice cream Ornament,-1,1000,99999999,99999999,icecream_corn_deco,2,10,0
+room,Ice cream Couch,-1,1000,99999999,99999999,icecream_chair_deco,2,15,1
+room,Berry Window,-1,1500,99999999,99999999,icecream_window_deco,2,20,2
+room,Picnic Lunch Bed,-1,2000,99999999,99999999,icecream_bed_deco,2,25,3
+room,Picnic Memento Shelf,-1,2500,99999999,99999999,icecream_shelf_deco,2,30,4
+room,Parfait Ornament,-1,1000,99999999,99999999,parfait_ornament_deco,3,10,0
+room,Jelly Lifebelt,-1,1500,99999999,99999999,parfait_tube_deco,3,15,1
+room,Sugar powdered Plants,-1,1500,99999999,99999999,parfait_plant_deco,3,20,2
+room,Mint Scent Sofa,-1,2000,99999999,99999999,parfait_sofa_deco,3,25,3
+room,Mint Choco Door,-1,2500,99999999,99999999,parfait_door_deco,3,30,4
+room,Cookie Bundle,-1,1000,99999999,99999999,cracker_bundle_deco,4,10,0
+room,Down Stair,-1,1000,99999999,99999999,cracker_stair_deco,4,15,1
+room,Book Shelf,-1,1500,99999999,99999999,cracker_shelf_deco,4,20,2
+room,Cookie Telescope,-1,2000,99999999,99999999,cracker_telescope_deco,4,25,3
+room,Cracker Universe Poster,-1,2500,99999999,99999999,cracker_poster_deco,4,30,4
+room,Doughnut Ornament,-1,1000,99999999,99999999,cottoncandy_ornament_deco,5,10,0
+room,Cotton Candy Garden,-1,1000,99999999,99999999,cottoncandy_garden_deco,5,15,1
+room,Cotton Candy Basket,-1,1500,99999999,99999999,cottoncandy_basket_deco,5,20,2
+room,Cotton Candy Bench,-1,2000,99999999,99999999,cottoncandy_bench_deco,5,25,3
+room,Pinwheel and Shelf,-1,2500,99999999,99999999,cottoncandy_shelf_deco,5,30,4
 ,,,,,,,,,
 ,,,,,,,,,
 ,,,,,,,,,

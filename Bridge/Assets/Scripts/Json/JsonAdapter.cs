@@ -188,7 +188,7 @@ public class JsonAdapter : MonoBehaviour
 
                 if(awsManager.userInfo.boong >= 4000 && QuestManager.questDelegate != null)
                 {
-                    QuestManager.questDelegate(4, QuestState.OnProgress);
+                    //QuestManager.questDelegate(4, QuestState.OnProgress);
                 }
 
                 fixData = JsonHelper.fixJson(fixDatas[1]);

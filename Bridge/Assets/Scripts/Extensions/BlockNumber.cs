@@ -31,16 +31,18 @@ static class BlockNumber
 
         //2층 블럭
         upperParfaitA = 31, upperParfaitB = 32, upperParfaitC = 33, upperParfaitD = 34,
-        upperObstacle = 39;
+        upperObstacle = 39,
+
+        gift = 19, upperGift = 49;
 
 
     public static int[] first_floor = new int[] { normal, cloudUp, cloudRight, cloudLeft, cloudDown, cracker_0, cracker_1, cracker_2 };
-    public static int[] second_floor = new int[] { upperNormal, upperCloudUp, upperCloudRight, upperCloudLeft, upperCloudDown, upperCracker_0, upperCracker_1, upperCracker_2, slopeUp,slopeRight,slopeDown,slopeLeft,parfaitA,parfaitB,parfaitC,parfaitD,character,obstacle };
-    public static int[] third_floor = new int[] { upperCharacter, upperObstacle, upperParfaitA, upperParfaitB, upperParfaitC, upperParfaitD };
+    public static int[] second_floor = new int[] { upperNormal, upperCloudUp, upperCloudRight, upperCloudLeft, upperCloudDown, upperCracker_0, upperCracker_1, upperCracker_2, slopeUp,slopeRight,slopeDown,slopeLeft,parfaitA,parfaitB,parfaitC,parfaitD,character,obstacle, gift };
+    public static int[] third_floor = new int[] { upperCharacter, upperObstacle, upperParfaitA, upperParfaitB, upperParfaitC, upperParfaitD,upperGift };
 
 
-    public static int[] firstlevel = new int[4] { normal, cracker_0, cracker_1, cracker_2 };
-    public static int[] secondLevel = new int[4] { upperNormal, upperCracker_0, upperCracker_1, upperCracker_2 };
+    public static int[] firstlevel = new int[5] { normal, cracker_0, cracker_1, cracker_2,gift};
+    public static int[] secondLevel = new int[5] { upperNormal, upperCracker_0, upperCracker_1, upperCracker_2,upperGift};
     public static int[] slopeLevel = new int[4] { slopeUp, slopeRight, slopeDown, slopeLeft };
 
     public static List<int> GetThirdFloorThroughBlock(int dir, bool onCloud)
@@ -71,6 +73,7 @@ static class BlockNumber
             {
                 throughBlockList.Add(upperParfaitA + i);
             }
+
             //throughBlockList.Add(upperParfaitA + parfaitOrder);            
         }
 
@@ -115,6 +118,7 @@ static class BlockNumber
             {
                 throughBlockList.Add(parfaitA + i);
             }
+
             
         }
         
@@ -149,9 +153,6 @@ static class BlockNumber
         }
 
 
-            
-
-        
 
         return stopBlockList;
     }
@@ -195,6 +196,7 @@ static class BlockNumber
 
         if (onCloud)
         {
+
             stopBlockList.AddRange(firstlevel);
             for (int i = 0; i <= parfaitOrder; i++)
             {

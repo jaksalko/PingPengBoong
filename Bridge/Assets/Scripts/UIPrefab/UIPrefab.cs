@@ -57,7 +57,7 @@ public class UIPrefab : MonoBehaviour
         LoadingSceneManager.instance.LoadScene(sceneName,transition);
     }
 
-    public void ExitButtonClicked()
+    public virtual void ExitButtonClicked()
     {
         gameObject.SetActive(false);
     }

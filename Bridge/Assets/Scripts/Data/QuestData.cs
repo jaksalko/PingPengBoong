@@ -111,13 +111,14 @@ namespace Data
 
             readonly int rewardBoong;
             readonly int rewardHeart;
+            readonly int[] unLockQuestIdx;
 
             public Action<Info> stateChangeAction;
 
             List<Sprite> summarySprites = new List<Sprite>();
             Sprite cartoonSprite = null;
 
-            public Info(int key, int category, string title, string content, bool story, bool cartoon, bool scene, int boong, int heart) : base(key)
+            public Info(int key, int category, string title, string content, bool story, bool cartoon, bool scene, int boong, int heart,int[] unLockIdx) : base(key)
             {
                 questCategory = category;
                 State = QuestState.Wait;
@@ -140,8 +141,20 @@ namespace Data
                 {
                     cartoonSprite = Resources.Load<Sprite>("Quest/Cartoon/" + key);
                 }
+
+                if(unLockIdx != null)
+                {
+                    unLockQuestIdx = unLockIdx;
+                }
             }
 
+            public int[] GetUnLockQuestIdx()
+            {
+                if (unLockQuestIdx != null)
+                    return unLockQuestIdx;
+                else
+                    return null;
+            }
 
             public bool HasStory() { return story; }
             public bool HasCartoon() { return cartoon; }
@@ -164,9 +177,9 @@ namespace Data
             public string GetRewardString()
             {
                 string text = "";
-                if (rewardBoong != 0 && rewardHeart == 0) text = "보상 : " + rewardBoong + "붕";
-                else if (rewardBoong == 0 && rewardHeart != 0) text = "보상 : " + "하트" + rewardHeart + "개";
-                else if (rewardHeart != 0 && rewardBoong != 0) text = "보상 : " + rewardBoong + "붕, 하트 " + rewardHeart + "개";
+                if (rewardBoong != 0 && rewardHeart == 0) text = "Reward : " + rewardBoong + " Boong";
+                else if (rewardBoong == 0 && rewardHeart != 0) text = "Reward : " + "Heart" + rewardHeart;
+                else if (rewardHeart != 0 && rewardBoong != 0) text = "Reward : " + rewardBoong + " Boong, Heart " + rewardHeart;
                 else text = "보상 없음";
 
                 return text;
@@ -224,8 +237,9 @@ namespace Data
                     //item string
                     string item = csvDatas[idx]["item"];
 
+                    int[] unLockIdx = ParseIntArr(csvDatas[idx]["openQuest"]);
                    
-                    info = new Info(idx, category, title, content, story, cartoon, scene, boong, heart);
+                    info = new Info(idx, category, title, content, story, cartoon, scene, boong, heart, unLockIdx);
 
                     infos.Add(idx, info);
                 }

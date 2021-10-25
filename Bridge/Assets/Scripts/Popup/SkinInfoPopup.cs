@@ -14,7 +14,7 @@ public class SkinInfoPopup : MonoBehaviour
     {
         skinNameText.text = skin.skinName;
         skinInfoText.text = skin.skinInfo;
-        skinImage.sprite = Resources.Load<Sprite>("store/skin/" + skin.path);
+        skinImage.sprite = Resources.Load<Sprite>(Constants.SkinStorePath + skin.path);
         skinRankImage.sprite = Resources.Load<Sprite>("store/rank/" + skin.path[0]);
         gameObject.SetActive(true);
     }

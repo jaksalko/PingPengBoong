@@ -20,8 +20,8 @@ public class MoPubDemoGUI : MonoBehaviour
 
     private readonly Dictionary<string, bool> _adUnitToShownMapping = new Dictionary<string, bool>();
 
-    private readonly Dictionary<string, List<MoPub.RewardData>> _adUnitToRewardsMapping =
-        new Dictionary<string, List<MoPub.RewardData>>();
+    private readonly Dictionary<string, List<MoPub.Reward>> _adUnitToRewardsMapping =
+        new Dictionary<string, List<MoPub.Reward>>();
 
     private bool _consentDialogLoaded;
 
@@ -151,7 +151,7 @@ public class MoPubDemoGUI : MonoBehaviour
         UpdateStatusLabel($"Consent status changed from {oldStatus} to {newStatus}");
     }
 
-    public void LoadAvailableRewards(string adUnitId, List<MoPub.RewardData> availableRewards)
+    public void LoadAvailableRewards(string adUnitId, List<MoPub.Reward> availableRewards)
     {
         // Remove any existing available rewards associated with this AdUnit from previous ad requests
         _adUnitToRewardsMapping.Remove(adUnitId);

@@ -141,6 +141,10 @@ public class MapLoader : MonoBehaviour
                 {
                     liveMap.UpdateCheckArray(j, i, false);
                 }
+                else if(newBlock.data == BlockNumber.gift || newBlock.data == BlockNumber.upperGift)
+                {
+                    liveMap.UpdateCheckArray(j, i, false);
+                }
                 else
                 {
                     liveMap.UpdateCheckArray(j, i, true);

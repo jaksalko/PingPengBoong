@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -324,6 +324,142 @@ MonoBehaviour:
   facebook_login_button: {fileID: 147189186}
   guest_login_button: {fileID: 1244276525}
   pressAnyButton: {fileID: 512204320921496697}
+--- !u!1 &77249290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 77249300}
+  - component: {fileID: 77249299}
+  - component: {fileID: 77249298}
+  - component: {fileID: 77249293}
+  - component: {fileID: 77249292}
+  - component: {fileID: 77249291}
+  m_Layer: 0
+  m_Name: MopubManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &77249291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77249290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3a6715b6d5764059a04103fa09599ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabledOptions:
+  - appId
+  appId:
+    android: 614c3aa14331e96aca3d8755
+    ios: 614c3a2e0266d65d6a39d62d
+--- !u!114 &77249292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77249290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f807f7721d5194ddda55870b64ca8dd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabledOptions:
+  - gameId
+  gameId:
+    android: 4375959
+    ios: 4375958
+--- !u!114 &77249293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77249290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35962e9681e5c415c819191621f704bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabledOptions:
+  - app_id
+  app_id:
+    android: 8003420
+    ios: 8003440
+--- !u!114 &77249298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77249290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3943a3ba43944bd4ac953da181782af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AutoShowConsentDialog: 0
+  LocationAwarenessUsage: Your location is used to provide more targeted advertising.
+  ConsentStatusChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  ConsentDialogLoaded:
+    m_PersistentCalls:
+      m_Calls: []
+  ConsentDialogFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  ConsentDialogShown:
+    m_PersistentCalls:
+      m_Calls: []
+  ConsentDialogDismissed:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &77249299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77249290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f30f64c5bd5b24380b40c623da6eea20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AutoInitializeOnStart: 1
+  itunesAppId: com.project99.ppb
+  AdUnitId: e95cbcc0313047ffbcf76660c85b19d4
+  LocationAware: 1
+  AllowLegitimateInterest: 0
+  LogLevel: 20
+  Initialized:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &77249300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77249290}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -40.8579, z: 90}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &147189184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1238,7 +1374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionAnimator: {fileID: 470783421}
-  customTimerMin: 3
+  customTimerMin: 1.5
 --- !u!1 &523822845
 GameObject:
   m_ObjectHideFlags: 0
@@ -1767,11 +1903,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ea4eea7b53ea46d2bfb08fc57a2f230, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maps: []
-  skins: []
-  blockPieces: []
-  blockPiecePrefab: {fileID: 474475623581452066, guid: d94943f941aeb44afb9d8f3f1816369a,
-    type: 3}
 --- !u!4 &753254764
 Transform:
   m_ObjectHideFlags: 0
@@ -3046,6 +3177,7 @@ MonoBehaviour:
     userStage: []
     userInventory: []
     userQuests: []
+    userRooms: []
 --- !u!4 &1250790826
 Transform:
   m_ObjectHideFlags: 0
@@ -4855,11 +4987,11 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 0
+  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
-  m_VertexStreams: 00010304
+  m_VertexStreams: 000304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -14352,11 +14484,11 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 0
+  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
-  m_VertexStreams: 00010304
+  m_VertexStreams: 000304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}

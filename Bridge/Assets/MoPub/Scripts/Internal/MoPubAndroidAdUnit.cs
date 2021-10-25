@@ -16,8 +16,8 @@ using UnityEngine;
 [SuppressMessage("ReSharper", "UnusedMember.Global")]
 internal class MoPubAndroidAdUnit : MoPubAdUnit {
     private readonly AndroidJavaObject _plugin;
-    private readonly Dictionary<MoPub.RewardData, AndroidJavaObject> _rewardsDict =
-        new Dictionary<MoPub.RewardData, AndroidJavaObject>();
+    private readonly Dictionary<MoPub.Reward, AndroidJavaObject> _rewardsDict =
+        new Dictionary<MoPub.Reward, AndroidJavaObject>();
 
     internal MoPubAndroidAdUnit(string adUnitId, string adType = null) : base (adUnitId, adType)
     {
@@ -139,9 +139,9 @@ internal class MoPubAndroidAdUnit : MoPubAdUnit {
     }
 
 
-    internal override List<MoPub.RewardData> GetAvailableRewards()
+    internal override List<MoPub.Reward> GetAvailableRewards()
     {
-        if (!CheckPluginReady()) return new List<MoPub.RewardData>();
+        if (!CheckPluginReady()) return new List<MoPub.Reward>();
 
         // Clear any existing reward object mappings between Unity and Android Java
         _rewardsDict.Clear();
@@ -150,15 +150,15 @@ internal class MoPubAndroidAdUnit : MoPubAdUnit {
             var rewardsJavaObjArray = AndroidJNIHelper.ConvertFromJNIArray<AndroidJavaObject[]>(obj.GetRawObject());
             foreach (var r in rewardsJavaObjArray) {
                 _rewardsDict.Add(
-                    new MoPub.RewardData { Label = r.Call<string>("getLabel"), Amount = r.Call<int>("getAmount") }, r);
+                    new MoPub.Reward { Label = r.Call<string>("getLabel"), Amount = r.Call<int>("getAmount") }, r);
             }
         }
 
-        return new List<MoPub.RewardData>(_rewardsDict.Keys);
+        return new List<MoPub.Reward>(_rewardsDict.Keys);
     }
 
 
-    internal override void SelectReward(MoPub.RewardData selectedReward)
+    internal override void SelectReward(MoPub.Reward selectedReward)
     {
         if (!CheckPluginReady()) return;
 

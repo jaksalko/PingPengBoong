@@ -427,8 +427,8 @@ public abstract class MoPub : MoPubBase
     /// Retrieves a list of available rewards for the given ad unit id.
     /// </summary>
     /// <param name="adUnitId">A string with the ad unit id.</param>
-    /// <returns>A list of <see cref="MoPub.RewardData"/>s for the given ad unit id.</returns>
-    public static List<RewardData> GetAvailableRewards(string adUnitId)
+    /// <returns>A list of <see cref="MoPub.Reward"/>s for the given ad unit id.</returns>
+    public static List<Reward> GetAvailableRewards(string adUnitId)
     {
         var rewards = AdUnitManager.GetAdUnit(adUnitId).GetAvailableRewards();
         Debug.Log(String.Format("GetAvailableRewards found {0} rewards for ad unit {1}", rewards.Count, adUnitId));
@@ -440,8 +440,8 @@ public abstract class MoPub : MoPubBase
     /// Selects the reward to give the user when the ad has finished playing.
     /// </summary>
     /// <param name="adUnitId">A string with the ad unit id.</param>
-    /// <param name="selectedReward">See <see cref="MoPub.RewardData"/>.</param>
-    public static void SelectReward(string adUnitId, RewardData selectedReward)
+    /// <param name="selectedReward">See <see cref="MoPub.Reward"/>.</param>
+    public static void SelectReward(string adUnitId, Reward selectedReward)
     {
         AdUnitManager.GetAdUnit(adUnitId).SelectReward(selectedReward);
     }

@@ -530,8 +530,96 @@ public class UserStage//클리어한 스테이지
 }
 
 [Serializable]
+public class UserRoom
+{
+    public delegate void ChangeSlotData(int slot,int data);
+    public static event ChangeSlotData changeSlotEvent;
+
+    //islandNumber 와 동일
+    public int roomIdx;
+    public bool isDirty;
+    public int slot_0;
+    public int slot_1;
+    public int slot_2;
+    public int slot_3;
+    public int slot_4;
+
+    public UserRoom()
+    {
+
+    }
+
+    public UserRoom(int idx,bool dirty, int slot_0, int slot_1, int slot_2, int slot_3, int slot_4)
+    {
+        roomIdx = idx;
+        isDirty = dirty;
+        this.slot_0 = slot_0;
+        this.slot_1 = slot_1;
+        this.slot_2 = slot_2;
+        this.slot_3 = slot_3;
+        this.slot_4 = slot_4;
+    }
+
+    public int GetSlotData(int idx)
+    {
+        int result = -1;
+        switch(idx)
+        {
+            case 0:
+                result = slot_0;
+                break;
+            case 1:
+                result = slot_1;
+                break;
+            case 2:
+                result = slot_2;
+                break;
+            case 3:
+                result = slot_3;
+                break;
+            case 4:
+                result = slot_4;
+                break;
+        }
+
+        return result;
+    }
+
+    public void SetSlotData(int slot, int key)
+    {
+        switch (slot)
+        {
+            case 0:
+                slot_0 = key;
+                break;
+            case 1:
+                slot_1 = key;
+                break;
+            case 2:
+                slot_2 = key;
+                break;
+            case 3:
+                slot_3 = key;
+                break;
+            case 4:
+                slot_4 = key;
+                break;
+        }
+
+        if(changeSlotEvent != null)
+            changeSlotEvent.Invoke(slot,key);
+    }
+    public UserRoom DeepCopy()
+    {
+        UserRoom copy = new UserRoom(roomIdx,isDirty, slot_0, slot_1, slot_2, slot_3, slot_4);
+        return copy;
+    }
+}
+
+[Serializable]
 public class UserInventory // 
 {
+    public int itemIdx;
     public string nickname;
     public string item_name;
     public string time_get;
@@ -541,8 +629,9 @@ public class UserInventory //
 
     }
 
-    public UserInventory(string nick, string name)
+    public UserInventory(string nick, int idx, string name)
     {
+        itemIdx = idx;
         nickname = nick;
         item_name = name;
         time_get = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
@@ -550,7 +639,7 @@ public class UserInventory //
 
     public UserInventory DeepCopy()
     {
-        UserInventory copy = new UserInventory(nickname, item_name);
+        UserInventory copy = new UserInventory(nickname,itemIdx, item_name);
         return copy;
     }
 }

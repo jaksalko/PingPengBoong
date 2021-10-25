@@ -94,7 +94,7 @@ public class IslandUIPrefab : UIPrefab
 
     public void ActiveStageSelectTab()
     {
-        QuestManager.questDelegate(1, QuestState.Clear);
+        
         IslandData.Info islandData = (IslandData.Info)data;
         GameObject.Find("Main Canvas").GetComponent<MainSceneUIScript>().PressIslandBtn(islandData.GetIslandNumber());
     }

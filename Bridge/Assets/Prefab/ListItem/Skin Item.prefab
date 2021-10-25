@@ -395,7 +395,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2865977752309151937}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2865977753173417073}
+        m_MethodName: InfoButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2865977752647649701
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,7 +972,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 175, y: 189}
+  m_SizeDelta: {x: 238, y: 79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &494025537289661422
 CanvasRenderer:
@@ -990,7 +1001,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c0390dc1658934e6a8f943fb93430427, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 30fc1f0ebdaff4708aca005ecab9bdf6, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

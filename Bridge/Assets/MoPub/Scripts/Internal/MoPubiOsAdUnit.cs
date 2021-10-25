@@ -136,9 +136,9 @@ internal class MoPubiOSAdUnit : MoPubAdUnit
 
     // Queries all of the available rewards for the ad unit. This is only valid after
     // a successful requestRewardedVideo() call.
-    internal override List<MoPub.RewardData> GetAvailableRewards()
+    internal override List<MoPub.Reward> GetAvailableRewards()
     {
-        if (!CheckPluginReady()) return new List<MoPub.RewardData>();
+        if (!CheckPluginReady()) return new List<MoPub.Reward>();
 
         var amount = 0;
         var rewardList = _mopubGetAvailableRewards(AdUnitId) ?? string.Empty;
@@ -147,11 +147,11 @@ internal class MoPubiOSAdUnit : MoPubAdUnit
                       into rewardComponents
                       where rewardComponents.Length == 2
                       where int.TryParse(rewardComponents[1], NumberStyles.Any, CultureInfo.InvariantCulture, out amount)
-                      select new MoPub.RewardData { Label = rewardComponents[0], Amount = amount };
+                      select new MoPub.Reward { Label = rewardComponents[0], Amount = amount };
         return rewards.ToList();
     }
 
-    internal override void SelectReward(MoPub.RewardData selectedReward)
+    internal override void SelectReward(MoPub.Reward selectedReward)
     {
         if (!CheckPluginReady()) return;
 

@@ -115,8 +115,18 @@ public class GameController : MonoBehaviour
         SwipeStream();
         GameSetting();
 
+        MoPubManager.OnInterstitialLoadedEvent += InterstitialLoadCallback;
+        MoPubManager.OnInterstitialFailedEvent += InterstitialFailedCallback;
+
         this.ObserveEveryValueChanged(x => parfaitOrder)
             .Subscribe(x => ui.ParfaitDone(parfaitOrder));
+
+        
+    }
+
+    void InterstitialFailedCallback(string adUnitId, string error)
+    {
+        Debug.LogFormat("Ad failed {0} , {1}", adUnitId, error);
     }
     
     void SwipeStream()
@@ -439,12 +449,7 @@ public class GameController : MonoBehaviour
     public void GameStart()//called by cameracontroller.cs after mapscanning...
     {
 
-        if(gameManager.stageDataOnPlay.GetIslandNumber() == 1 && gameManager.stageDataOnPlay.GetStageNumber() == 1)
-        {
-            QuestManager.questDelegate(2, QuestState.Clear);//스테이지 진입 퀘스트 성공
-            QuestManager.questDelegate(6, QuestState.OnProgress);//튜토리얼 스테이지 올 클리어 퀘스트 시작
-        }
-
+        
         //if(!simulating)
         ui.SetRemainText(remain: snow_remain, total: snow_total);
         ui.SetSlider(map.GetStepLimits(), map.GetStepLimitsByIndex(2));
@@ -464,12 +469,12 @@ public class GameController : MonoBehaviour
         
         ui.inGame.SetActive(true);
 
-        /*
-        if (gameManager.playIslandName == "tutorial_island")
+        
+        if (gameManager.stageDataOnPlay.GetIslandNumber() == 1)
         {
             StartCoroutine(TutorialManager.instance.StartTutorial(gameManager.stageDataOnPlay.GetStageNumber()));            
         }
-        */
+        
         
 
         
@@ -510,6 +515,13 @@ public class GameController : MonoBehaviour
     */
 #endregion
 
+    void InterstitialLoadCallback(string id)
+    {
+        Debug.Log("Interstitial AD Callback");
+        MoPub.RequestInterstitialAd(id);
+        MoPub.ShowInterstitialAd(id);
+    }
+
     public void GameEnd(bool success)
     {
         isSuccess = success;
@@ -535,35 +547,59 @@ public class GameController : MonoBehaviour
         {
             if (isSuccess)
             {
+                int interstitialID = UnityEngine.Random.Range(0, Constants.FULL_IOS.Length);
+               
+                if (GameManager.instance.FullADCount % 5 ==0)
+                {
+#if UNITY_ANDROID
+                    MoPub.RequestInterstitialAd(Constants.FULL_ANDROID[interstitialID]);
+                    MoPub.ShowInterstitialAd(Constants.FULL_ANDROID[interstitialID]);
+#elif UNITY_EDITOR
+#else
+                    
+                    MoPub.RequestInterstitialAd(Constants.FULL_IOS[interstitialID]);
+                    MoPub.ShowInterstitialAd(Constants.FULL_IOS[interstitialID]);
+#endif
+
+                }
+                GameManager.instance.FullADCount++;
+
+
                 userHistory.stage_clear++;
 
                 if (!gameManager.stageDataOnPlay.GetIsClear())//최초 클리어
                 {
                     if (gameManager.stageDataOnPlay.GetIslandNumber() == 1 && gameManager.stageDataOnPlay.GetStageNumber() == 6)
                     {
-                        QuestManager.questDelegate(3, QuestState.OnProgress);//3 시작
-                        QuestManager.questDelegate(6, QuestState.Clear);//6 클리어
-                        QuestManager.questDelegate(7, QuestState.OnProgress);//7시작
+                        QuestManager.questDelegate(6, QuestState.Clear);//튜토리얼 섬 클리어
                     }
-                    else if (gameManager.stageDataOnPlay.GetIslandNumber() == 2 && gameManager.stageDataOnPlay.GetStageNumber() == 4)
+                    else if (gameManager.stageDataOnPlay.GetIslandNumber() == 2 && gameManager.stageDataOnPlay.GetStageNumber() == 30)
                     {
                         QuestManager.questDelegate(7, QuestState.Clear);//6 클리어
-                        QuestManager.questDelegate(8, QuestState.OnProgress);//7시작
                     }
-                    else if (gameManager.stageDataOnPlay.GetIslandNumber() == 3 && gameManager.stageDataOnPlay.GetStageNumber() == 4)
+                    else if (gameManager.stageDataOnPlay.GetIslandNumber() == 3 && gameManager.stageDataOnPlay.GetStageNumber() == 30)
                     {
                         QuestManager.questDelegate(8, QuestState.Clear);//6 클리어
-                        QuestManager.questDelegate(9, QuestState.OnProgress);//7시작
                     }
-                    else if (gameManager.stageDataOnPlay.GetIslandNumber() == 4 && gameManager.stageDataOnPlay.GetStageNumber() == 4)
+                    else if (gameManager.stageDataOnPlay.GetIslandNumber() == 4 && gameManager.stageDataOnPlay.GetStageNumber() == 30)
                     {
                         QuestManager.questDelegate(9, QuestState.Clear);//6 클리어
-                        QuestManager.questDelegate(10, QuestState.OnProgress);//7시작
                     }
-                    else if (gameManager.stageDataOnPlay.GetIslandNumber() == 5 && gameManager.stageDataOnPlay.GetStageNumber() == 4)
+                    else if (gameManager.stageDataOnPlay.GetIslandNumber() == 5 && gameManager.stageDataOnPlay.GetStageNumber() == 30)
                     {
                         QuestManager.questDelegate(10, QuestState.Clear);//6 클리어
 
+                    }
+
+                    if (gameManager.stageDataOnPlay.GetStageNumber() % 5 == 0 && gameManager.stageDataOnPlay.GetIslandNumber() != 1)
+                    {
+                        int devide = (gameManager.stageDataOnPlay.GetStageNumber() / 5)- 1;
+                        if(devide == 0)
+                        {
+                            xmlManager.database.userRooms[0].isDirty = false;
+                            xmlManager.SaveItems();
+                        }
+                       
                     }
 
                     UserStage newStageClear = new UserStage(userInfo.nickname,gameManager.stageDataOnPlay.GetIslandNumber(), gameManager.stageDataOnPlay.GetStageNumber(), gameManager.stageDataOnPlay.GetStageName(), star, moveCount);
@@ -786,5 +822,9 @@ public class GameController : MonoBehaviour
     
    */
 
+    private void OnDestroy()
+    {
+        MoPubManager.OnInterstitialLoadedEvent -= InterstitialLoadCallback;
+    }
 
 }

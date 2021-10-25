@@ -168,7 +168,7 @@ public class UiController : UIScript
         if(GameController.Playing)
         {
             GameController.instance.SetPlaying(false);
-            pauseStageText.text = gameManager.stageDataOnPlay.GetStageName();
+            pauseStageText.text = "STAGE " + gameManager.stageDataOnPlay.GetStageText();
 
             /*
             if (AWSManager.instance.userInfo.heart == 0)

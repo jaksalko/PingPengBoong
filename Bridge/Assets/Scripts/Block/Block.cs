@@ -12,6 +12,7 @@ public class Block : MonoBehaviour , IBlock
         Parfait,
         Cracker,
         Cloud,
+        Gift,
         Other
     };
 
@@ -44,6 +45,10 @@ public class Block : MonoBehaviour , IBlock
         else if ((data >= BlockNumber.parfaitA && data <= BlockNumber.parfaitD) || (data >= BlockNumber.upperParfaitA && data <= BlockNumber.upperParfaitD))
         {
             type = Type.Parfait;
+        }
+        else if(data == BlockNumber.gift || data == BlockNumber.upperGift)
+        {
+            type = Type.Gift;
         }
         else
         {

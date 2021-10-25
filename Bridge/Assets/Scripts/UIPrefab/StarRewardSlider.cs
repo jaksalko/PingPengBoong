@@ -39,7 +39,7 @@ public class StarRewardSlider : UIPrefab
 
         for (int i = 0; i < 3; i++)
         {
-            int reward_num = ((islandData.GetIslandNumber() - 1) * 3) + i; //보상 번호
+            int reward_num = CSVManager.rewardData.GetInfoIdx(islandData.GetIslandNumber() - 1, i);
             int frequency = (islandData.GetMaxStar() / 3) * (i + 1);
             
             if (XMLManager.ins.database.userReward.Exists(x => x.reward_num == reward_num))//받은 보상
@@ -72,7 +72,6 @@ public class StarRewardSlider : UIPrefab
 
     void GetReward()
     {
-
         UserInfo userInfo = xmlManager.database.userInfo;
         UserHistory userHistory = xmlManager.database.userHistory;
         UserReward userReward = new UserReward(xmlManager.database.userInfo.nickname, reward_num);
@@ -88,7 +87,7 @@ public class StarRewardSlider : UIPrefab
         userHistory.boong_get += reward.boong;
         userHistory.heart_get += reward.heart;
 
-        QuestManager.questDelegate(3, QuestState.Clear);
+        QuestManager.questDelegate(2, QuestState.Clear);
         SetRewardUI();
 
         /*

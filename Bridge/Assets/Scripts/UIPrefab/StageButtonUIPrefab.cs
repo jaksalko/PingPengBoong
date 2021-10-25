@@ -5,7 +5,8 @@ using UnityEngine.UI;
 using Data;
 public class StageButtonUIPrefab : UIPrefab
 {
-    private Image stageTextImage;
+    private Image stageImage;
+    private Text stageText;
     private Image stageStarImage;
     private Button stageButton;
 
@@ -14,16 +15,18 @@ public class StageButtonUIPrefab : UIPrefab
         stageButton = this.gameObject.GetComponent<Button>();
         stageButton.onClick.AddListener(()=>StageButtonClicked());
 
-        stageTextImage = this.gameObject.GetComponent<Image>();
-        stageStarImage = stageTextImage.transform.GetChild(0).gameObject.GetComponent<Image>();
+        stageImage = this.gameObject.GetComponent<Image>();
+        stageStarImage = stageImage.transform.GetChild(0).gameObject.GetComponent<Image>();
+        stageText = stageImage.transform.GetChild(1).gameObject.GetComponent<Text>();
     }
 
     public override void SetUIPrefab(BaseData.BaseDataInfo data)
     {
         base.SetUIPrefab(data);
         var stageData = (StageData.Info)data;
-        stageTextImage.sprite = Resources.Load<Sprite>("LevelScene/Stage/stage_number_" + stageData.GetStageText());
+        stageImage.sprite = Resources.Load<Sprite>("LevelScene/Stage/"+stageData.GetIslandNumber());
         stageStarImage.sprite = Resources.Load<Sprite>("Star/" + stageData.GetStarCount());
+        stageText.text = stageData.GetIslandNumber() + "-" + stageData.GetStageNumber();
 
         if(stageData.GetIsOpen())
         {
@@ -39,13 +42,13 @@ public class StageButtonUIPrefab : UIPrefab
 
     public void SetStageButtonUIPrefab(Sprite stageSprite , Sprite starImage)
     {
-        stageTextImage.sprite = stageSprite;
+        stageImage.sprite = stageSprite;
         stageStarImage.sprite = starImage;
     }
 
     public void SetStageButtonUIPrefab(int islandNumber,int stageNumber,bool isClear, int starCount)
     {
-        stageTextImage.sprite = Resources.Load<Sprite>("LevelScene/Stage/stage_number_"+islandNumber+"_"+stageNumber);
+        stageImage.sprite = Resources.Load<Sprite>("LevelScene/Stage/stage_number_"+islandNumber+"_"+stageNumber);
         stageStarImage.sprite = Resources.Load<Sprite>("Star/"+starCount);
     }
 

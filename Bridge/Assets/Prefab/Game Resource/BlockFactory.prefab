@@ -57,6 +57,8 @@ MonoBehaviour:
     type: 3}
   crackedBlockPrefab: {fileID: 4109644230205604729, guid: aa2dfc258b364469e8600bc7f7bf5108,
     type: 3}
+  giftBlockPrefab: {fileID: 8806925290203942413, guid: 4e06bb7b08a974d1bae909e2ce6bd644,
+    type: 3}
   playerPrefabs:
   - {fileID: -5295225299004715089, guid: 653336900f71c42e286b20da922c43bf, type: 3}
   - {fileID: -4235399664634847206, guid: 00053c3fc927847f0884e1e1e1489472, type: 3}

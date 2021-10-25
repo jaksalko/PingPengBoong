@@ -33,7 +33,7 @@ public class CSVManager : MonoBehaviour
 
         //GetStyleList();
         //GetBlockItemData();
-        stageData.Parsing(CSVReader.Read("stage_demo"));
+        stageData.Parsing(CSVReader.Read("stage_soft"));
         roomDecorationData.Parsing(CSVReader.Read("item"));
         questData.Parsing(CSVReader.Read("Quest"));
         islandData.Parsing(CSVReader.Read("IslandData"));

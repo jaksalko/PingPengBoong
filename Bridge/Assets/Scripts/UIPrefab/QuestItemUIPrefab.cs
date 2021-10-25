@@ -134,6 +134,7 @@ public class QuestItemUIPrefab : UIPrefab
     void GetReward()
     {
         QuestData.Info questData = (QuestData.Info)data;
+        QuestManager.questDelegate(1, QuestState.Clear);
         QuestManager.questDelegate(questData.GetQuestNumber(), QuestState.Rewarded);
         SetRewardButtonInteractable((QuestData.Info)data);
     }

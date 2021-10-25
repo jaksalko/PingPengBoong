@@ -30,6 +30,8 @@ public class MainSceneUIScript : UIScript
 	public Transform islandUIParent;
 	public Transform islandRoadContent;
 
+	public Button startButton;
+
 	[Header("Island Text")]
 	public Text boong_text;
 	public Text heart_text;
@@ -42,7 +44,7 @@ public class MainSceneUIScript : UIScript
 	public StarGuideBookPopup starGuideBookPopup;
 	public ProfilePopup profilePopup;
 	public StagePopup stagePopup;
-
+	public SkinInfoPopup infoPopup;
 
 	
 
@@ -52,43 +54,59 @@ public class MainSceneUIScript : UIScript
 	public MyIgloo myIgloo;
 	public StageSelectTab stageSelectTab;
 	public EditorPanel editorPanel;
+	public GameObject decorationPanel;
 
 	List<GameObject> mainscenePanels = new List<GameObject>();
+
 
 	private void Start()
 	{
 		
+		int bannerID = Random.Range(0, Constants.BANNER_ANDROID.Length);
+		
+#if UNITY_ANDROID
+		MoPub.RequestBanner(Constants.BANNER_ANDROID[bannerID], MoPub.AdPosition.TopCenter, MoPubBase.MaxAdSize.ScreenWidthHeight90);
+		MoPub.ShowBanner(Constants.BANNER_ANDROID[bannerID], true);
+#elif UNITY_EDITOR
+#else
+		MoPub.RequestBanner(Constants.BANNER_IOS[bannerID], MoPub.AdPosition.TopCenter, MoPubBase.MaxAdSize.ScreenWidthHeight90);
+		MoPub.ShowBanner(Constants.BANNER_IOS[bannerID], true);
+#endif
+
+
 		soundManager = SoundManager.instance;
 
-		QuestManager.questDelegate(1, QuestState.OnProgress);
-
-		using (var e = CSVManager.islandData.GetInfoEnumerator())
-		{
-			while (e.MoveNext())
-			{
-				var data = e.Current.Value;
-				IslandUIPrefab islandUI = Instantiate(islandUIPrefab);//메인화면의 섬 유아이
-				IslandRoadUIPrefab islandRoadUI = Instantiate(islandRoadUIPrefab);//레벨 패널의 섬 길 유아이
-
-				islandUI.SetUIPrefab(data);
-				islandUI.SetParentAsLastSibling(islandUIParent);
-
-				islandRoadUI.SetUIPrefab(data);
-				islandRoadUI.SetParentAsFirstSibling(islandRoadContent);
-				stageSelectTab.SetHeightDictionary(data.GetIslandNumber(), islandRoadUI.GetIslandBackgroundSize());
-
-			}
+		//QuestManager.questDelegate(1, QuestState.OnProgress);
+		QuestManager.questDelegate(6, QuestState.OnProgress);//첫 퀘스트 시작
+		TutorialManager.instance.tutorialCanvas.gameObject.SetActive(false);
+		/*
+		if(CSVManager.questData.GetInfo(6).GetQuestState() == QuestState.OnProgress || CSVManager.questData.GetInfo(6).GetQuestState() == QuestState.Watched)
+        {
+			TutorialManager.instance.tutorialCanvas.gameObject.SetActive(true);
+			TutorialManager.instance.helpText.text = "Press Start Button to play";
+			TutorialManager.instance.helpText.rectTransform.anchoredPosition
+				= startButton.GetComponent<RectTransform>().anchoredPosition + new Vector2(100,-100);
 
 		}
-
-
-		
+		else if(CSVManager.questData.GetInfo(5).GetQuestState() == QuestState.OnProgress || CSVManager.questData.GetInfo(5).GetQuestState() == QuestState.Watched)
+        {
+			TutorialManager.instance.tutorialCanvas.gameObject.SetActive(true);
+			TutorialManager.instance.helpText.text = "Press Start Button to play";
+			TutorialManager.instance.helpText.rectTransform.anchoredPosition
+				= startButton.GetComponent<RectTransform>().anchoredPosition + new Vector2(100, -100);
+		}
+		else
+        {
+			TutorialManager.instance.tutorialCanvas.gameObject.SetActive(false);
+		}
+		*/
 
 		mainscenePanels.Add(gatcha.gameObject);
 		mainscenePanels.Add(store.gameObject);
 		mainscenePanels.Add(myIgloo.gameObject);
 		mainscenePanels.Add(stageSelectTab.gameObject);
 		mainscenePanels.Add(editorPanel.gameObject);
+		mainscenePanels.Add(decorationPanel);
 	}
 
 	void InActivePanels()

@@ -68,7 +68,7 @@ public class MyIgloo : UIScript
     
     void ChangeSkin(int a_num , int b_num)
     {
-        QuestManager.questDelegate(5, Data.QuestState.Clear);
+        QuestManager.questDelegate(4, Data.QuestState.Clear);
         foreach(var a in skinA.Values)
         {
             a.SetActive(false);

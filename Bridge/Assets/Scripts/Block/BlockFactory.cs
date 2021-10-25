@@ -13,7 +13,7 @@ public class BlockFactory : MonoBehaviour
     public ParfaitBlock parfaitBlockPrefab;
     public CloudBlock cloudBlockPrefab;
     public CrackedBlock crackedBlockPrefab;
-
+    public GiftBlock giftBlockPrefab;
     public Player[] playerPrefabs;
 
     int player_count = 0;
@@ -234,6 +234,14 @@ public class BlockFactory : MonoBehaviour
             }
             newBlock = Instantiate(playerPrefabs[player_skin], new Vector3(position.x, 2, position.y), playerPrefabs[player_skin].transform.rotation);
             newBlock.GetComponent<Player>().tempBlock = belowTheMainBlock;
+        }
+        else if(BlockNumber.gift == blockNumber)
+        {
+            newBlock = Instantiate(giftBlockPrefab, new Vector3(position.x, 1, position.y), giftBlockPrefab.transform.rotation);
+        }
+        else if (BlockNumber.upperGift == blockNumber)
+        {
+            newBlock = Instantiate(giftBlockPrefab, new Vector3(position.x, 2, position.y), giftBlockPrefab.transform.rotation);
         }
         else
         {

@@ -69,6 +69,10 @@ namespace Data
 
                 }
 
+               
+
+                
+
             }
 
         }
@@ -108,6 +112,7 @@ namespace Data
                 Info info = null;
                 if (!infos.TryGetValue(idx,out info))
                 {
+                    Debug.Log(idx);
                     int islandNumber = ParseInt(csvDatas[idx]["islandNumber"]);
                     int stageNumber = ParseInt(csvDatas[idx]["stageNumber"]);
                     int numberOfSnow = ParseInt(csvDatas[idx]["numberOfSnow"]);
@@ -150,7 +155,7 @@ namespace Data
         {
 
             List<List<int>> map_datas = new List<List<int>>();
-
+            Debug.Log(data_string.Length);
 
             int count = 0;
 
@@ -159,7 +164,9 @@ namespace Data
                 List<int> line = new List<int>();
                 for (int j = 0; j < width; j++)
                 {
+
                     int data = int.Parse(data_string[count]);
+                    //Debug.LogFormat("data : {0} idx : {1},{2}", data, i,j);
                     line.Add(data);
 
                     count++;

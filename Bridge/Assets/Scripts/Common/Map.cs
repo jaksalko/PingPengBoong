@@ -541,7 +541,7 @@ public class Map : IMap
                 if (player.onCloud)
                     player.isLock = true;
             }
-            else if(player.state == Player.State.Master && pos.y == 1 && next >= BlockNumber.upperNormal && next < BlockNumber.upperObstacle)
+            else if(player.state == Player.State.Master && pos.y == 1 && next >= BlockNumber.upperNormal && next <= BlockNumber.upperGift)
             {
                 player.actionnum = 3;
                 player.stateChange = true;

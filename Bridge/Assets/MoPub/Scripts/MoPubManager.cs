@@ -204,6 +204,7 @@ public class MoPubManager : MonoBehaviour
     {
         if (isActiveAndEnabled && Initialized != null)
             Initialized.Invoke(adunitid);
+
     }
 
 
@@ -241,6 +242,19 @@ public class MoPubManager : MonoBehaviour
         MoPub.InitializeSdk(SdkConfiguration);
         MoPub.ReportApplicationOpen(itunesAppId);
         MoPub.EnableLocationSupport(LocationAware);
+
+
+        MoPub.LoadBannerPluginsForAdUnits(Constants.BANNER_TEST);
+        MoPub.LoadInterstitialPluginsForAdUnits(Constants.FULL_TEST);
+#if UNITY_ANDROID
+        MoPub.LoadBannerPluginsForAdUnits(Constants.BANNER_ANDROID);
+        MoPub.LoadInterstitialPluginsForAdUnits(Constants.FULL_ANDROID);
+#elif UNITY_EDITOR
+#else
+		MoPub.LoadBannerPluginsForAdUnits(Constants.BANNER_IOS);
+        MoPub.LoadInterstitialPluginsForAdUnits(Constants.FULL_IOS);
+#endif
+
     }
 
 

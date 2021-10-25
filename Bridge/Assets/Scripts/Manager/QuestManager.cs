@@ -79,6 +79,15 @@ public class QuestManager : MonoBehaviour
             info.SetQuestState(state);
             UserQuest userQuest = new UserQuest(nickname, questNumber, (int)state);
             XMLManager.ins.database.userQuests.Find(x => x.quest_number == questNumber).quest_state = (int)state;
+
+            if(info.GetUnLockQuestIdx() != null)
+            {
+                foreach (var unLockIdx in info.GetUnLockQuestIdx())
+                {
+                    questDelegate(unLockIdx, QuestState.OnProgress);
+                }
+            }
+            
             //UserQuest Update
         }
         else if (info.GetQuestState() == QuestState.Clear && state == QuestState.Rewarded)//보상 획득

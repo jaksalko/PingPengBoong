@@ -23,7 +23,7 @@ public class MoPubAdUnit
     {
         AdUnitId = adUnitId;
         AdType = adType;
-        SelectedReward = new MoPub.RewardData { Label = string.Empty };
+        SelectedReward = new MoPub.Reward { Label = string.Empty };
     }
 
     internal static MoPubAdUnit CreateMoPubAdUnit(string adUnitId, string adType = null)
@@ -95,7 +95,7 @@ public class MoPubAdUnit
 
     #region RewardedVideos
 
-    protected MoPub.RewardData SelectedReward;
+    protected MoPub.Reward SelectedReward;
 
     internal virtual void RequestRewardedVideo(List<MoPub.LocalMediationSetting> mediationSettings = null,
         string keywords = null,
@@ -109,13 +109,13 @@ public class MoPubAdUnit
 
     // Queries all of the available rewards for the ad unit. This is only valid after
     // a successful requestRewardedVideo() call.
-    internal virtual List<MoPub.RewardData> GetAvailableRewards() { return null; }
+    internal virtual List<MoPub.Reward> GetAvailableRewards() { return null; }
 
 
     // If a rewarded video ad is loaded this will take over the screen and show the ad
     internal virtual void ShowRewardedVideo(string customData) { }
 
-    internal virtual void SelectReward(MoPub.RewardData selectedReward) { }
+    internal virtual void SelectReward(MoPub.Reward selectedReward) { }
 
     #endregion RewardedVideos
 

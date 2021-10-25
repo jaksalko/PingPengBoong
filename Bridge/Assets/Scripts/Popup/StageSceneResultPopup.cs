@@ -31,7 +31,7 @@ public class StageSceneResultPopup : UIPrefab
     public void ShowResultPopup(bool isSuccess,int remain_snow,int move_count , int star_count)
     {
         gameObject.SetActive(true);
-        stageText.text = GameManager.instance.stageDataOnPlay.GetStageName();
+        stageText.text = "STAGE " + GameManager.instance.stageDataOnPlay.GetStageText();
 
         if(isSuccess)
         {

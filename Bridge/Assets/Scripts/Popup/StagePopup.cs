@@ -32,7 +32,7 @@ public class StagePopup : UIPrefab
         stageNumber = stageData.GetStageNumber();
         islandNumber = stageData.GetIslandNumber();
 
-        stageText.text = stageData.GetStageText();//스테이지 번호 텍스트
+        stageText.text = "STAGE " + stageData.GetStageText();//스테이지 번호 텍스트
         starImage.sprite = Resources.Load<Sprite>("Star/" + stageData.GetStarCount());
         stageImage.sprite = Resources.Load<Sprite>("Stage/" + stageData.GetStageText());
         titleText.text = stageData.GetStageName();//스테이지 타이틀 텍스트

@@ -34,7 +34,6 @@ public class StageSelectTab : UIPrefab
     protected override void Start()
     {
         base.Start();
-        QuestManager.questDelegate(2, Data.QuestState.OnProgress);
     }
 
     // Update is called once per frame

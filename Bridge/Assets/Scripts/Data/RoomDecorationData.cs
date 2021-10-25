@@ -29,6 +29,9 @@ namespace Data
             public int GetSlot() { return slot; }
             public int GetPrice() { return price; }
             public string GetName() { return name_key; }
+
+            public int GetIsland() { return island; }
+            public int GetLevel() { return level; }
         }
 
         Dictionary<int, Info> Infos = new Dictionary<int, Info>();

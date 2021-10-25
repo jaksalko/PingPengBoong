@@ -8,17 +8,32 @@ public class RoomResourceUI : MonoBehaviour
 {
     public readonly static string RoomResourceDefaultPath = "Sprite/RoomResource/";
 
-    public Image imageRoomResource;
-    public Button buttonRoomResourceEdit;
-
     
+    public Button RoomResourceEditButton;
+    public GameObject[] imageRoomResources;
+
     public void ButtonInteractable(bool isActive)
     {
-        buttonRoomResourceEdit.interactable = isActive;
+        RoomResourceEditButton.interactable = isActive;
     }
 
-    public void SetImageRoomResource(string imagePath)
+    //idx == XML userRooms.slot_
+    public void SetImageRoomResource(int idx)
     {
+        foreach (var imageResource in imageRoomResources)
+        {
+            imageResource.SetActive(false);
+        }
+
+        if (idx == 0)
+        {
+            imageRoomResources[idx].SetActive(true);
+            return;
+        }
+            
+
+        int islandNumber = CSVManager.roomDecorationData.GetInfo(idx).GetIsland();
+        /*
         Sprite sprite = null;
         sprite = Resources.Load<Sprite>(RoomResourceDefaultPath + imagePath);
         if(sprite == null)
@@ -29,6 +44,10 @@ public class RoomResourceUI : MonoBehaviour
         {
             imageRoomResource.sprite = sprite;
         }
+        */
+        
+
+        imageRoomResources[islandNumber-1].SetActive(true);
     }
 
     //Onclick Method ButtonRoomResourceEdit

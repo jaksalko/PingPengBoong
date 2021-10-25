@@ -100,28 +100,7 @@ public class LoadingScene : MonoBehaviour
     }
 
     
-    /*
-    void FacebookNotLoggedInCallback(ILoginResult result)//처음 앱을 사용할 경우 또는 다시 앱을 설치했을 경우
-    {
-        if (FB.IsLoggedIn)//success get token
-        {
-
-            Debug.Log("You get Access Token : " + AccessToken.CurrentAccessToken.UserId);
-            awsManager.AddLogin_To_Credentials(AccessToken.CurrentAccessToken.TokenString);
-            jsonAdapter.GetUserInfo(xmlManager.database.userInfo.nickname);
-        }
-        else//error...
-        {
-            Debug.Log("FB Login error");
-        }
-    }
-    void Callback_Load_UserInfo(bool isExist)
-    {
-        //xml은 언제나 최신 업데이트라는 가정.
-        //xml -> dynamodb
-
-    }
-    */
+   
 
     #region 로그인 버튼
     public void SignUpGuest()
@@ -152,8 +131,8 @@ public class LoadingScene : MonoBehaviour
         {
             UserInfo userInfo = new UserInfo(nickname.text, facebookUserId);
             UserHistory userHistory = new UserHistory(nickname.text);
-            UserInventory skin0 = new UserInventory(nickname.text, CSVManager.skinData.GetInfo(1).skinName);
-            UserInventory skin1 = new UserInventory(nickname.text, CSVManager.skinData.GetInfo(2).skinName);
+            UserInventory skin0 = new UserInventory(nickname.text, 1,CSVManager.skinData.GetInfo(1).skinName);
+            UserInventory skin1 = new UserInventory(nickname.text, 2,CSVManager.skinData.GetInfo(2).skinName);
 
             UserAccountCreate userAccount = new UserAccountCreate(userInfo, userHistory, skin0, skin1);
             var request = jsonAdapter.POST_DATA(userAccount, "newUser/create", (isConnect) => {

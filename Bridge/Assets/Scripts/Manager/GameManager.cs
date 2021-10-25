@@ -27,10 +27,14 @@ public class GameManager : MonoBehaviour
     public Map playEditorMap;
     public bool retry;
 
+
     AWSManager awsManager = AWSManager.instance;
     XMLManager xmlManager = XMLManager.ins;
     CSVManager csvManager = CSVManager.instance;
     JsonAdapter jsonAdapter = JsonAdapter.instance;
+
+
+    public int FullADCount = 0;
 
     private void Awake()
     {

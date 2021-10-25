@@ -21,7 +21,7 @@ public class BlockPiece : MonoBehaviour
     {
         if(AWSManager.instance.userInfo.block_powder >= block_powder)
         {
-            UserInventory newItem = new UserInventory(AWSManager.instance.userInfo.nickname, blockName);
+            UserInventory newItem = new UserInventory(AWSManager.instance.userInfo.nickname,-1, blockName);
             UserInfo deepcopyUserInfo = AWSManager.instance.userInfo.DeepCopy();
             UserHistory deepCopyUserHistory = AWSManager.instance.userHistory.DeepCopy();
             BuyItem buyBlockPiece = new BuyItem(deepcopyUserInfo, deepCopyUserHistory, newItem);

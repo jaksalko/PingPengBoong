@@ -318,7 +318,7 @@ public abstract class MoPubBase : MoPubBaseInternal
     }
 
 
-    public struct RewardData
+    public struct Reward
     {
         public string Label;
         public int Amount;

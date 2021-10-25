@@ -20,6 +20,8 @@ public enum TutorialType
 
 public class TutorialManager : MonoBehaviour
 {
+    public Text helpText;
+
     Coroutine tutorialCoroutine;
     public TutorialType tutorialType;
     public GameObject tutorialCanvas;
@@ -87,7 +89,7 @@ public class TutorialManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
-
+        
         
 
         bp_tutorial_stage_0 = new string[]
@@ -179,7 +181,7 @@ public class TutorialManager : MonoBehaviour
     "잘 부탁해 @.",
     "떨어지면 다시 올라갈 수 없으니까."};
 
-
+        
 
     }
 
@@ -192,7 +194,6 @@ public class TutorialManager : MonoBehaviour
             .Where(_ => inScript)
             .Subscribe(_ => NextProgressClicked());
 
-        
     }
 
     void SetDialog()
@@ -375,38 +376,8 @@ public class TutorialManager : MonoBehaviour
 
     public IEnumerator StartTutorial(int number)
     {
-        tutorialCanvas.SetActive(true);//Awake
-        dialog.gameObject.SetActive(true);
-        progressButton.SetActive(true);
-        tutorialType = TutorialType.Dialog;
-
-        skipButton.interactable = true;
-
-        GameController.Playing = false;
-        inScript = true;
-
-        int dialogCount = 0;
+        tutorialCanvas.SetActive(true);
         uiController = GameObject.Find("UiController").GetComponent<UiController>();
-
-        while (dialogCount != dialogDataDictionary[number].Count)
-        {
-            DialogData dialogData = dialogDataDictionary[number][dialogCount];
-            if (dialogData.speaker == "ping")
-            {
-               
-                if(uiController != null)
-                    uiController.ChangeCharacter(1);
-            }
-            else
-            {
-                if (uiController != null)
-                    uiController.ChangeCharacter(2);
-            }
-            yield return StartCoroutine(dialog.Texting(dialogData));
-            dialogCount++;
-        }
-
-        progressButton.SetActive(false);
         GameController.Playing = true;
         inScript = false;
 
@@ -420,27 +391,43 @@ public class TutorialManager : MonoBehaviour
         }
         if (GameManager.instance.stageDataOnPlay.GetStageNumber() == 2)
         {
-            yield return StartCoroutine(ChangeCharacter(GameController.instance.player1));
+            yield return StartCoroutine(ChangeCharacter(GameController.instance.player2));
         }
 
         if (GameManager.instance.stageDataOnPlay.GetStageNumber() == 4)
         {
             yield return StartCoroutine(MoveTutorial(0));
-            yield return StartCoroutine(ChangeCharacter(GameController.instance.player1));
+            yield return StartCoroutine(ChangeCharacter(GameController.instance.player2));
             yield return StartCoroutine(MoveTutorial(1));
             yield return StartCoroutine(MoveTutorial(2));
             yield return StartCoroutine(MoveTutorial(3));
+            yield return StartCoroutine(MoveTutorial(0));
+            yield return StartCoroutine(MoveTutorial(1));
         }
         if (GameManager.instance.stageDataOnPlay.GetStageNumber() == 5)
         {
-            yield return StartCoroutine(ChangeCharacter(GameController.instance.player2));
             yield return StartCoroutine(MoveTutorial(2));
             yield return StartCoroutine(MoveTutorial(1));
+            yield return StartCoroutine(ChangeCharacter(GameController.instance.player2));
+            yield return StartCoroutine(MoveTutorial(1));
+            yield return StartCoroutine(ChangeCharacter(GameController.instance.player1));
+            yield return StartCoroutine(MoveTutorial(0));
+            yield return StartCoroutine(ChangeCharacter(GameController.instance.player2));
+            yield return StartCoroutine(MoveTutorial(3));
+            yield return StartCoroutine(MoveTutorial(2));
+            yield return StartCoroutine(MoveTutorial(1));
+            yield return StartCoroutine(ChangeCharacter(GameController.instance.player1));
+            yield return StartCoroutine(MoveTutorial(3));
+            yield return StartCoroutine(MoveTutorial(0));
+
         }
         if (GameManager.instance.stageDataOnPlay.GetStageNumber() == 6)
         {
             yield return StartCoroutine(ChangeCharacter(GameController.instance.player2));
             yield return StartCoroutine(MoveTutorial(2));
+            yield return StartCoroutine(ChangeCharacter(GameController.instance.player1));
+            yield return StartCoroutine(MoveTutorial(1));
+            yield return StartCoroutine(MoveTutorial(0));
         }
         tutorialCanvas.SetActive(false);
         dialog.gameObject.SetActive(false);

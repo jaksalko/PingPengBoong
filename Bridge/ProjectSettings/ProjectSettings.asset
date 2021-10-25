@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: project99
-  productName: "\uD551\uD3AD\uBD95"
+  productName: PingPengBoong
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -121,7 +121,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.96
+  bundleVersion: 1.00
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -168,8 +168,8 @@ PlayerSettings:
     Android: com.project99.PingPengBooong
     iPhone: com.project99.ppb
   buildNumber:
-    iPhone: 0.96
-  AndroidBundleVersionCode: 96
+    iPhone: 0.99
+  AndroidBundleVersionCode: 100
   AndroidMinSdkVersion: 19
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -773,9 +773,9 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLWasmStreaming: 0
   scriptingDefineSymbols:
-    1: UNITY_POST_PROCESSING_STACK_V2
-    4: 
-    7: CLOUDONCE_GOOGLE;UNITY_POST_PROCESSING_STACK_V2;DELIGHT_MODULE_TEXTMESHPRO
+    1: UNITY_POST_PROCESSING_STACK_V2;mopub_manager
+    4: mopub_manager
+    7: ROCESSING_STACK_V2;DELIGHT_MODULE_TEXTMESHPRO;mopub_managerULE_TEXTMESHPRO;mopub_manager;UNITY_POST_PROCESSING_STACK_V2
     13: UNITY_POST_PROCESSING_STACK_V2
     19: UNITY_POST_PROCESSING_STACK_V2
     21: UNITY_POST_PROCESSING_STACK_V2

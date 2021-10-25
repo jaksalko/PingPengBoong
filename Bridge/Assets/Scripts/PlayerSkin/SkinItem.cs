@@ -19,7 +19,7 @@ public class SkinItem : MonoBehaviour
 
     //CSV SkinData data
     public SkinData.Info skin;
-
+    SkinInfoPopup skinInfoPopup = null;
     public void Initialize(SkinData.Info data)
     {
         skin = data;
@@ -38,6 +38,17 @@ public class SkinItem : MonoBehaviour
 
     public void InfoButtonClicked()
     {
+        if(skinInfoPopup == null)
+        {
+            MainSceneUIScript mainSceneUI = GameObject.Find("Main Canvas").GetComponent<MainSceneUIScript>();
+            if (mainSceneUI != null)
+            {
+                skinInfoPopup = mainSceneUI.infoPopup;
+            }
+        }
+
+        skinInfoPopup.ActivatePopup(skin);
+       
 
     }
 
@@ -54,15 +65,14 @@ public class SkinItem : MonoBehaviour
         {
            
 
-            UserInventory newItem = new UserInventory(userInfo.nickname, skinText.text);
+            UserInventory newItem = new UserInventory(userInfo.nickname,skin.key, skinText.text);
             XMLManager.ins.database.userInventory.Add(newItem);
             skin.inPossession = true;
 
             userInfo.boong -= skin.boong_buy;
             userHistory.boong_use += skin.boong_buy;
 
-            QuestManager.questDelegate(5, Data.QuestState.OnProgress);//5 시작
-            QuestManager.questDelegate(4, Data.QuestState.Clear);//4 완료
+            QuestManager.questDelegate(3, Data.QuestState.Clear);//스킨 구매 완료
             /*
             BuyItem skinBuy = new BuyItem(deepCopyUserInfo, deepCopyUserHistory, newItem);
 
@@ -101,7 +111,7 @@ public class SkinItem : MonoBehaviour
 
         if (userInfo.skin_powder >= skin.powder_buy)
         {
-            UserInventory newItem = new UserInventory(userInfo.nickname, skinText.text);
+            UserInventory newItem = new UserInventory(userInfo.nickname,skin.key, skinText.text);
             userInfo.skin_powder -= skin.powder_buy;
             BuyItem skinBuy = new BuyItem(userInfo, userHistory, newItem);
 
@@ -110,8 +120,7 @@ public class SkinItem : MonoBehaviour
                 {
                     if (QuestManager.questDelegate != null)
                     {
-                        QuestManager.questDelegate(5, Data.QuestState.OnProgress);//5 시작
-                        QuestManager.questDelegate(4, Data.QuestState.Clear);//4 완료
+                        QuestManager.questDelegate(3, Data.QuestState.Clear);//스킨 구매 완료
                     }
                 }
                 else

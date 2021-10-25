@@ -16,9 +16,9 @@ public class RewardData : BaseData
         public int skin_powder;
         public int block_powder;
 
-        public UserInventory userInventory;
+        public List<UserInventory> userInventory;
 
-        public Info(int key,int island_num, int level, int boong, int heart, int block_powder, int skin_powder, string item) : base(key)
+        public Info(int key,int island_num, int level, int boong, int heart, int block_powder, int skin_powder, int[] itemIdx) : base(key)
         {
             island = island_num;
             star_index = level;
@@ -27,16 +27,20 @@ public class RewardData : BaseData
             this.block_powder = block_powder;
             this.skin_powder = skin_powder;
 
-            if (item != "none")
+            if (itemIdx != null)
             {
                 Debug.Log("item");
-                userInventory = new UserInventory(PlayerPrefs.GetString("nickname", "pingpengboong"), item);
+                List<UserInventory> userInventory = new List<UserInventory>();
+                foreach (var item in itemIdx)
+                {
+                    userInventory.Add(new UserInventory(SystemInfo.deviceUniqueIdentifier, item, CSVManager.skinData.GetInfo(item).skinName));
+                }
+                this.userInventory = userInventory;
 
             }
             else
             {
-                Debug.Log("none");
-                userInventory = new UserInventory(PlayerPrefs.GetString("nickname", "pingpengboong"), "none");
+                this.userInventory = null;
             }
         }
     }
@@ -46,6 +50,19 @@ public class RewardData : BaseData
     public Info GetInfo(int key)
     {
         return infos[key];
+    }
+
+    public int GetInfoIdx(int island, int level)
+    {
+        foreach(var info in infos)
+        {
+            if(info.Value.island == island && info.Value.star_index == level)
+            {
+                return info.Key;
+            }
+        }
+
+        return -1;
     }
 
     public override void ClearData()
@@ -67,7 +84,7 @@ public class RewardData : BaseData
                 int heart = ParseInt(csvDatas[idx]["heart"]);
                 int block_powder = ParseInt(csvDatas[idx]["block_powder"]);
                 int skin_powder = ParseInt(csvDatas[idx]["skin_powder"]);
-                string item = csvDatas[idx]["item"];
+                int[] item = ParseIntArr(csvDatas[idx]["itemIdx"]);
                 info = new Info(idx, island, level, boong, heart, block_powder, skin_powder, item);
 
                 infos.Add(idx, info);
