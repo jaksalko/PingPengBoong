@@ -63,6 +63,8 @@ public class MyIgloo : UIScript
 
         var changeSkinBStream = xmlManager.database.userInfo.ObserveEveryValueChanged(x => x.skin_b)
             .Subscribe(skin_num => ChangeSkin(xmlManager.database.userInfo.skin_a, skin_num));
+
+        Sorting();
     }
 
     

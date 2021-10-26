@@ -150,6 +150,7 @@ public class Map : IMap
                 if (next >= BlockNumber.parfaitA && next <= BlockNumber.parfaitD)
                 {
                     //change block data parfait to normal
+                    blocks[posZ + step[direction, 0], posX + step[direction, 1]].data = BlockNumber.normal;
                     //blocks[posZ + step[direction, 0], posX + step[direction, 1]].data = BlockNumber.normal; //pos 위치가 아닌 한칸 이동한 위치
                     if ((next % 10 - 1) == GameController.ParfaitOrder)
                         GameController.ParfaitOrder++;
@@ -208,8 +209,9 @@ public class Map : IMap
             case 2:
                 if (next >= BlockNumber.upperParfaitA && next <= BlockNumber.upperParfaitD)
                 {
+                    blocks[posZ + step[direction, 0], posX + step[direction, 1]].data = BlockNumber.upperNormal;
                     //blocks[posZ + step[direction, 0], posX + step[direction, 1]].data = BlockNumber.upperNormal;
-                    if((next%10-1) == GameController.ParfaitOrder)
+                    if ((next%10-1) == GameController.ParfaitOrder)
 					    GameController.ParfaitOrder++;
                     Debug.Log("up");
                     return true;

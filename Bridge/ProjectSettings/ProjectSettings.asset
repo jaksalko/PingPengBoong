@@ -121,7 +121,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.00
+  bundleVersion: 1.002
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -168,8 +168,8 @@ PlayerSettings:
     Android: com.project99.PingPengBooong
     iPhone: com.project99.ppb
   buildNumber:
-    iPhone: 0.99
-  AndroidBundleVersionCode: 100
+    iPhone: 1.002
+  AndroidBundleVersionCode: 101
   AndroidMinSdkVersion: 19
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1

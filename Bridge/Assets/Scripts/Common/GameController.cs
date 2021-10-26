@@ -253,7 +253,7 @@ public class GameController : MonoBehaviour
    
     public void MakeMoveCommand()
     {
-       
+        //Can Move Player
         if (!player1.Moving() && !player2.Moving() && isPlaying && unirx_dir != -1)
         {
             moveCommand = new MoveCommand(nowPlayer, map, unirx_dir);
@@ -311,6 +311,11 @@ public class GameController : MonoBehaviour
 
             ui.SetMoveCountText(moveCount, map.GetStepLimitsByIndex(2));
             ui.revertButton.interactable = true;
+        }
+        //Cannot move player
+        else
+        {
+
         }
 
     }

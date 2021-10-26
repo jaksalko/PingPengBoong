@@ -98,6 +98,7 @@ public class MoveCommand : ICommand
          * GameController
          * Player(Both)
         */
+		GameController.Playing = false;
 
 		GameController.ParfaitOrder = beforeParfaitOrder;
 		GameController.instance.moveCount = moveCount;
@@ -167,7 +168,7 @@ public class MoveCommand : ICommand
 		GameController.instance.UndoCommand();
 		GameController.instance.RemainCheck();
 
-
+		GameController.Playing = true;
 	}
 
 

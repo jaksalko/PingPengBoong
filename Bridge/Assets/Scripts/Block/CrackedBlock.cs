@@ -156,8 +156,12 @@ public class CrackedBlock : Block
         base.RevertBlock(block);
         CrackedBlock crackedBlock = (CrackedBlock)block;
         Debug.Log(transform.position + " is " + crackedBlock.count);
-        count = crackedBlock.count;
-        SetMaterial();
+        if(crackedBlock.count != count)
+        {
+            count = crackedBlock.count;
+            SetMaterial();
+        }
+        
 
     }
 }

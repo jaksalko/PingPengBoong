@@ -41,7 +41,7 @@ public class MainSceneUIScript : UIScript
 	[Header("POPUP")]
 	public GameObject settingPopup;
 	public QuestPopup questPopup;
-	public StarGuideBookPopup starGuideBookPopup;
+	
 	public ProfilePopup profilePopup;
 	public StagePopup stagePopup;
 	public SkinInfoPopup infoPopup;
@@ -52,7 +52,7 @@ public class MainSceneUIScript : UIScript
 	public Gatcha gatcha;
 	public Store store;
 	public MyIgloo myIgloo;
-	public StageSelectTab stageSelectTab;
+	public StarGuideBookPopup starGuideBookPopup;
 	public EditorPanel editorPanel;
 	public GameObject decorationPanel;
 
@@ -104,7 +104,7 @@ public class MainSceneUIScript : UIScript
 		mainscenePanels.Add(gatcha.gameObject);
 		mainscenePanels.Add(store.gameObject);
 		mainscenePanels.Add(myIgloo.gameObject);
-		mainscenePanels.Add(stageSelectTab.gameObject);
+		mainscenePanels.Add(starGuideBookPopup.gameObject);
 		mainscenePanels.Add(editorPanel.gameObject);
 		mainscenePanels.Add(decorationPanel);
 	}
@@ -185,12 +185,14 @@ public class MainSceneUIScript : UIScript
 		InActivePanels();
 		gatcha.gameObject.SetActive(true);
 		*/
-	}	
+	}
+	/*
 	public void PressIslandBtn(int islandNumber)
 	{
 		InActivePanels();
 		stageSelectTab.ActivateStageSelectTab(islandNumber);
 	}
+	*/
 	public void EditorButtonClicked()
     {
 		InActivePanels();

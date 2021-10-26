@@ -51,6 +51,7 @@ public class ParfaitBlock : Block
 
     public void SetParfait()
     {
+        Debug.LogFormat("Set Parfait {0} : {1}", sequence, state);
         switch(state)
         {
             case State.inactive:
@@ -108,7 +109,7 @@ public class ParfaitBlock : Block
             activeParticle[i].Stop();
         }
 
-        GetComponent<BoxCollider>().enabled = true;
+        GetComponent<BoxCollider>().enabled = false;
     }
 
     public void Activate()//얼음이 녹은 상태로

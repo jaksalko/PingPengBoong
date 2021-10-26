@@ -466,6 +466,7 @@ public class TutorialManager : MonoBehaviour
     }
     IEnumerator MoveTutorial(int move)//입력받아야할 방향 0123 위 오른쪽 아래 왼쪽
     {
+        GameController.instance.unirx_dir = -1;
         bool temp_player1 = uiController.player1.interactable;
         bool temp_player2 = uiController.player2.interactable;
 

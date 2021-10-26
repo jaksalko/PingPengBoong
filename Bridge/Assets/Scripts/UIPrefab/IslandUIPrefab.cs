@@ -96,6 +96,6 @@ public class IslandUIPrefab : UIPrefab
     {
         
         IslandData.Info islandData = (IslandData.Info)data;
-        GameObject.Find("Main Canvas").GetComponent<MainSceneUIScript>().PressIslandBtn(islandData.GetIslandNumber());
+        GameObject.Find("Main Canvas").GetComponent<MainSceneUIScript>().ActiveStarGuideBookPopup(islandData.GetIslandNumber());
     }
 }

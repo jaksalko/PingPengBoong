@@ -23,8 +23,6 @@ public class StageSceneResultPopup : UIPrefab
     public Button retryButton;
     public Button nextButton;
 
-    public GameObject DemoClear;
-
     public AudioSource successAudio;
 
     bool clicked = false;
@@ -35,10 +33,7 @@ public class StageSceneResultPopup : UIPrefab
 
         if(isSuccess)
         {
-            if(GameManager.instance.stageDataOnPlay.GetIslandNumber() == 5 && GameManager.instance.stageDataOnPlay.GetStageNumber() == 4)
-            {
-                DemoClear.SetActive(true);
-            }
+            
 
             stageText.transform.SetParent(successPopup.transform, false);
             buttons.SetParent(successPopup.transform, false);

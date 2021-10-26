@@ -203,18 +203,36 @@ public class Player : Block , IMoveable
                 transform.position = targetPositions[0].Item1;
                 Debug.Log(name + " : " + "Arrive... target position : " + targetPositions[0].Item1 + "  distance : " + distance);
 
+                int integerPositionX = (int)Math.Round(targetPositions[0].Item1.x);
+                int integerPositionZ = (int)Math.Round(targetPositions[0].Item1.z);
+
+
+                Block block = GameController.instance.GetMap().GetBlock(integerPositionX, integerPositionZ);
+
+                
+
+                //마지막 블럭이 아니면
                 if (targetPositions.Count != 1)
                 {
-                    int integerPositionX = (int)Math.Round(targetPositions[0].Item1.x);
-                    int integerPositionZ = (int)Math.Round(targetPositions[0].Item1.z);
-
-
-                    Block block = GameController.instance.GetMap().GetBlock(integerPositionX, integerPositionZ);
-                    if (block.type == Type.Cracker)
+                    if (block.type == Type.Parfait)
+                    {
+                        ParfaitBlock parfait = (ParfaitBlock)block;
+                        if (parfait.state == ParfaitBlock.State.active)
+                        {
+                            Debug.Log("get parfait...");
+                            parfait.ActiveNextParfait();
+                        }
+                        else
+                        {
+                            Debug.Log("pass inactive parfait...");
+                        }
+                    }
+                    else if (block.type == Type.Cracker)
                     {
                         CrackedBlock crackedBlock = (CrackedBlock)block;
                         crackedBlock.BreakCrackerBlock();
                     }
+                    
 
                     direction = targetPositions[0].Item2;
                     transform.rotation = Quaternion.Euler(new Vector3(0f, direction * 90, 0f));
@@ -224,6 +242,20 @@ public class Player : Block , IMoveable
                 }
                 else//last target position
                 {
+                    if (tempBlock.type == Type.Parfait)
+                    {
+                        ParfaitBlock parfait = (ParfaitBlock)tempBlock;
+                        if (parfait.state == ParfaitBlock.State.active)
+                        {
+                            Debug.Log("get parfait...");
+                            parfait.ActiveNextParfait();
+                        }
+                        else
+                        {
+                            Debug.Log("pass inactive parfait...");
+                        }
+                    }
+
                     direction = targetPositions[0].Item2;
                     transform.rotation = Quaternion.Euler(new Vector3(0f, direction * 90, 0f));
                     targetPositions.RemoveAt(0);
@@ -406,25 +438,29 @@ public class Player : Block , IMoveable
     }
 
     
-
+    /*
     private void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("trigger enter " + collider.name);
-        if (collider.gameObject.CompareTag("Parfait"))
+        if(GameController.Playing)
         {
-            ParfaitBlock parfait = collider.GetComponent<ParfaitBlock>();
-            if (parfait.state == ParfaitBlock.State.active)
+            Debug.Log("trigger enter " + collider.name);
+            if (collider.gameObject.CompareTag("Parfait"))
             {
-				Debug.Log("get parfait...");
-				parfait.ActiveNextParfait();
-            }
-            else
-            {
-                Debug.Log("pass inactive parfait...");
+                ParfaitBlock parfait = collider.GetComponent<ParfaitBlock>();
+                if (parfait.state == ParfaitBlock.State.active)
+                {
+                    Debug.Log("get parfait...");
+                    parfait.ActiveNextParfait();
+                }
+                else
+                {
+                    Debug.Log("pass inactive parfait...");
+                }
             }
         }
+        
     }
-
+    */
 	private void BumpParticleControl()
 	{
 		bumpParticle.SetActive(false);
