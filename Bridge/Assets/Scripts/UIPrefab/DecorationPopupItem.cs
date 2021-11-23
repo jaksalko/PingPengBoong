@@ -104,7 +104,7 @@ public class DecorationPopupItem : MonoBehaviour
                 ReleaseItem();
                 break;
         }
-        XMLManager.ins.SaveItems();
+        XMLManager.ins.SaveXML();
     }
 
     void SetButtonImage()

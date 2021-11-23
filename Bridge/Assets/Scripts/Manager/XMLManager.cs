@@ -35,95 +35,93 @@ public class XMLManager : MonoBehaviour
     //list of items 
     public Database database;
 
-    //save function
-    public void SaveItems()
+    public void CreateXML()
     {
-
-        XmlSerializer serializer = new XmlSerializer(typeof(Database));
 
         /*
-        if(database.userInfo != null)
-            database.userInfo.log_out = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+        XmlDocument xmlDocument = new XmlDocument();
+        xmlDocument.AppendChild(xmlDocument.CreateXmlDeclaration("1.0", "utf-8", "yes"));
 
+        XmlNode rootNode = xmlDocument.CreateNode(XmlNodeType.Element , "Database", string.Empty);
+        xmlDocument.AppendChild(rootNode);
+
+        XmlNode childNode = xmlDocument.CreateNode(XmlNodeType.Element, "User", string.Empty);
+        rootNode.AppendChild(childNode);
         */
-#if UNITY_EDITOR
-        using (FileStream stream = new FileStream(
-            Application.dataPath + "/XML/item_data.xml", FileMode.Create))
-        {
-            StreamWriter sw = new StreamWriter(stream, Encoding.UTF8);
-            serializer.Serialize(sw, database); // put into xml files
-            sw.Close();//important :)
-        }
+        Database database = new Database(SystemInfo.deviceUniqueIdentifier);
 
-
-#elif UNITY_IOS || UNITY_ANDROID
-          
-        string path = Application.persistentDataPath;
-        
-        if(!Directory.Exists(Path.GetDirectoryName(path)))
-        {
-            Directory.CreateDirectory(Path.GetDirectoryName(path));
-        }
-
-            using (FileStream stream = new FileStream(
-            path + "/item_data.xml", FileMode.Create))
-            {
-                StreamWriter sw = new StreamWriter(stream, Encoding.UTF8);
-                serializer.Serialize(sw, database); // put into sml files)
-                sw.Close();//important :)
-            }
-#endif
-
-
-    }
-   
-    //load function
-    public void LoadItems()
-    {
-        string path;
         XmlSerializer serializer = new XmlSerializer(typeof(Database));
-
-#if UNITY_EDITOR
-        try
+        using (FileStream fileStream = new FileStream(Application.dataPath + "/Resources/XML/Database.xml", FileMode.Create))
         {
-            FileStream stream = new FileStream(
-            Application.dataPath + "/XML/item_data.xml", FileMode.Open);
-            database = serializer.Deserialize(stream) as Database;
-            stream.Close();
-            
-
+            serializer.Serialize(fileStream, database);
+            this.database = database;
         }
-        catch(System.Exception e)//doesn't exist file
-        {
-            Debug.LogWarning("LoadItems Exception Error : " + e.ToString());
-            database.InitializeInfo();
+        //StreamWriter writer = new StreamWriter("/");
 
-        }
-#elif UNITY_IOS || UNITY_ANDROID
-        try
-        {
-        path = Application.persistentDataPath;
-        //path += "datas";
-        FileStream stream = new FileStream(
-            path + "/item_data.xml", FileMode.Open);
-            database = serializer.Deserialize(stream) as Database;
-            stream.Close();
-        }
-        catch(System.Exception e)
-        {
+        /*
+        [XmlElement("UserInfo")]
+        public UserInfo userInfo;
 
-            Debug.LogWarning("LoadItems Exception Error : " + e.ToString());
-            database.InitializeInfo();
+        [XmlElement("UserHistory")]
+        public UserHistory userHistory;
 
-        }
-#endif
+        [XmlArray("UserReward")]
+        public List<UserReward> userReward;
+
+        [XmlArray("UserStage")]
+        public List<UserStage> userStage;
+
+        [XmlArray("UserInventory")]
+        public List<UserInventory> userInventory;
+
+        [XmlArray("UserQuest")]
+        public List<UserQuest> userQuests;
+
+        [XmlArray("UserRoom")]
+        public List<UserRoom> userRooms;
+        */
 
     }
+    public void LoadXML()
+    {
+        XmlSerializer serializer = new XmlSerializer(typeof(Database));
+        using (FileStream fileStream = new FileStream(Application.dataPath + "/Resources/XML/Database.xml", FileMode.Open))
+        {
+            try
+            {
+                database = serializer.Deserialize(fileStream) as Database;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+
+        }
+
+    }
+    public void SaveXML()
+    {
+        XmlSerializer serializer = new XmlSerializer(typeof(Database));
+        using (FileStream fileStream = new FileStream(Application.dataPath + "/Resources/XML/Database.xml", FileMode.Create))
+        {
+            if (database == null)
+            {
+                throw new System.Exception("Save Data Exception database is null..");
+            }
+            else
+            {
+                serializer.Serialize(fileStream, database);
+            }
+
+        }
+    }
+
 
 
     void OnApplicationQuit()
     {
-        SaveItems();
+        SaveXML();
         PlayerPrefs.Save();
     }
     
@@ -132,7 +130,7 @@ public class XMLManager : MonoBehaviour
         if(pause)
         {
             paused = true;
-            SaveItems();
+            SaveXML();
             PlayerPrefs.Save();
         }
         else
@@ -233,7 +231,7 @@ public class UserInfo
 [Serializable]
 public class Database
 {
-    
+   
     //List<Dictionary<string, object>> data;
     [XmlElement("UserInfo")]
     public UserInfo userInfo;
@@ -259,6 +257,33 @@ public class Database
     //public List<UserFriend> userFriend = new List<UserFriend>();
 
     //EditorMap
+
+    public Database()
+    {
+
+    }
+
+    public Database(string deviceID)
+    {
+        userInfo = new UserInfo(deviceID, null);
+        userHistory = new UserHistory(deviceID);
+
+        userInventory = new List<UserInventory>();
+        userInventory.Add(new UserInventory(deviceID, 1, CSVManager.skinData.GetInfo(1).skinName));
+        userInventory.Add(new UserInventory(deviceID, 2, CSVManager.skinData.GetInfo(2).skinName));
+
+        userRooms = new List<UserRoom>();
+        userRooms.Add(new UserRoom(1, true, 0, 0, 0, 0, 0));
+        userRooms.Add(new UserRoom(2, true, 0, 0, 0, 0, 0));
+        userRooms.Add(new UserRoom(3, true, 0, 0, 0, 0, 0));
+        userRooms.Add(new UserRoom(4, true, 0, 0, 0, 0, 0));
+        userRooms.Add(new UserRoom(5, true, 0, 0, 0, 0, 0));
+
+        userStage = new List<UserStage>();
+        userQuests = new List<UserQuest>();
+        userReward = new List<UserReward>();
+
+    }
 
     //첫시작 또는 스테이지 클리어 
     public void SyncWithCSV()
@@ -333,7 +358,7 @@ public class Database
         userRooms.Add(new UserRoom(4, true, 0, 0, 0, 0, 0));
         userRooms.Add(new UserRoom(5, true, 0, 0, 0, 0, 0));
 
-        XMLManager.ins.SaveItems();
+        XMLManager.ins.SaveXML();
     }
 
     public void InitializeHistory(string nickname)
@@ -361,7 +386,7 @@ public class Database
                 {
                     userInfo.heart++;
                     userInfo.heart_time = 600;
-                    XMLManager.ins.SaveItems();
+                    XMLManager.ins.SaveXML();
                     
                 }
             }

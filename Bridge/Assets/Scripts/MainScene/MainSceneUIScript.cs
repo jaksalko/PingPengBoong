@@ -61,7 +61,8 @@ public class MainSceneUIScript : UIScript
 
 	private void Start()
 	{
-		
+		//GoogleAdsManager.instance.RequestBannerAd();
+		/*
 		int bannerID = Random.Range(0, Constants.BANNER_ANDROID.Length);
 		
 #if UNITY_ANDROID
@@ -72,7 +73,7 @@ public class MainSceneUIScript : UIScript
 		MoPub.RequestBanner(Constants.BANNER_IOS[bannerID], MoPub.AdPosition.TopCenter, MoPubBase.MaxAdSize.ScreenWidthHeight90);
 		MoPub.ShowBanner(Constants.BANNER_IOS[bannerID], true);
 #endif
-
+		*/
 
 		soundManager = SoundManager.instance;
 

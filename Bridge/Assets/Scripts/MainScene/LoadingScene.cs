@@ -7,12 +7,6 @@ using UnityEngine.Networking;
 using System.Text.RegularExpressions;
 using System;
 
-using Amazon;
-using Amazon.CognitoIdentity;
-
-using System.Text;
-using System.Security.Cryptography;
-
 
 
 public class LoadingScene : MonoBehaviour
@@ -70,6 +64,7 @@ public class LoadingScene : MonoBehaviour
    
     void Start()
     {
+        
         //Debug.Log(PlayerPrefs.GetInt("tutorial", 0));
         PlayerPrefs.SetInt("tutorial", 99);
 
@@ -87,7 +82,19 @@ public class LoadingScene : MonoBehaviour
         jsonAdapter.ReadyRequest(allEditorMapRequest);
         */
 
-        LoginWithLocalData();
+        var userData = Resources.Load("XML/Database");
+        if(userData == null)
+        {
+            Debug.Log("Create xml");
+            xmlManager.CreateXML();
+        }
+        else
+        {
+            Debug.Log("Load xml");
+            xmlManager.LoadXML();
+        }
+        xmlManager.database.SyncWithCSV();
+        //LoginWithLocalData();
 
 
     }
@@ -95,8 +102,8 @@ public class LoadingScene : MonoBehaviour
     //로컬 로그인
     void LoginWithLocalData()
     {
-        xmlManager.LoadItems();//if xml file not exist create it.
-        xmlManager.database.SyncWithCSV();
+        //xmlManager.LoadItems();//if xml file not exist create it.
+        //xmlManager.database.SyncWithCSV();
     }
 
     

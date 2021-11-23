@@ -115,8 +115,8 @@ public class GameController : MonoBehaviour
         SwipeStream();
         GameSetting();
 
-        MoPubManager.OnInterstitialLoadedEvent += InterstitialLoadCallback;
-        MoPubManager.OnInterstitialFailedEvent += InterstitialFailedCallback;
+        //MoPubManager.OnInterstitialLoadedEvent += InterstitialLoadCallback;
+        //MoPubManager.OnInterstitialFailedEvent += InterstitialFailedCallback;
 
         this.ObserveEveryValueChanged(x => parfaitOrder)
             .Subscribe(x => ui.ParfaitDone(parfaitOrder));
@@ -216,6 +216,7 @@ public class GameController : MonoBehaviour
         if(Vector2.Distance(up, down) <= 30)//민감도
         {
             unirx_dir = -1;
+            //ui.ChangeCharacter();
             return;
         }
         Vector2 normalized = (up - down).normalized;
@@ -523,8 +524,8 @@ public class GameController : MonoBehaviour
     void InterstitialLoadCallback(string id)
     {
         Debug.Log("Interstitial AD Callback");
-        MoPub.RequestInterstitialAd(id);
-        MoPub.ShowInterstitialAd(id);
+        //MoPub.RequestInterstitialAd(id);
+        //MoPub.ShowInterstitialAd(id);
     }
 
     public void GameEnd(bool success)
@@ -539,6 +540,11 @@ public class GameController : MonoBehaviour
         UserInfo userInfo = xmlManager.database.userInfo;
         UserHistory userHistory = xmlManager.database.userHistory;
 
+        if(GoogleAdsManager.instance.isActivateInterstitialAd)
+        {
+            GoogleAdsManager.instance.ShowInterstitialAd();
+
+        }
 
         if(customMode)
         {
@@ -553,7 +559,8 @@ public class GameController : MonoBehaviour
             if (isSuccess)
             {
                 int interstitialID = UnityEngine.Random.Range(0, Constants.FULL_IOS.Length);
-               
+
+                /*
                 if (GameManager.instance.FullADCount % 5 ==0)
                 {
 #if UNITY_ANDROID
@@ -567,6 +574,7 @@ public class GameController : MonoBehaviour
 #endif
 
                 }
+                */
                 GameManager.instance.FullADCount++;
 
 
@@ -602,7 +610,7 @@ public class GameController : MonoBehaviour
                         if(devide == 0)
                         {
                             xmlManager.database.userRooms[0].isDirty = false;
-                            xmlManager.SaveItems();
+                            xmlManager.SaveXML();
                         }
                        
                     }
@@ -610,17 +618,17 @@ public class GameController : MonoBehaviour
                     UserStage newStageClear = new UserStage(userInfo.nickname,gameManager.stageDataOnPlay.GetIslandNumber(), gameManager.stageDataOnPlay.GetStageNumber(), gameManager.stageDataOnPlay.GetStageName(), star, moveCount);
                     xmlManager.database.userStage.Add(newStageClear);
 
-                    userInfo.boong += 200 + gameManager.stageDataOnPlay.GetIslandNumber() * 50;
-                    userHistory.boong_get = 200 + gameManager.stageDataOnPlay.GetIslandNumber() * 50;
+                    int getBoongAmount = 200 + gameManager.stageDataOnPlay.GetIslandNumber() * 50;
+                    userInfo.boong += getBoongAmount;
+                    userHistory.boong_get += getBoongAmount;
 
-                    ui.GameEnd(isSuccess, star, snow_remain, moveCount, customMode, editorMode);
+                    ui.GameEnd(isSuccess, star, snow_remain, moveCount, customMode, editorMode , getBoongAmount);
                 }
                 else//이미 클리어 된 스테이지
                 {
                     UserStage clearStage = xmlManager.database.userStage.Find(x => x.stage_name == gameManager.stageDataOnPlay.GetStageName());
                     clearStage.UpdateClearStage(star, moveCount);
-                    ui.GameEnd(isSuccess, star, snow_remain, moveCount, customMode, editorMode);
-
+                    ui.GameEnd(isSuccess, star, snow_remain, moveCount, customMode, editorMode, 0 );
                 }
 
 
@@ -628,7 +636,7 @@ public class GameController : MonoBehaviour
             else//fail stage
             {
                 userHistory.stage_fail++;
-                ui.GameEnd(isSuccess, star, snow_remain, moveCount, customMode, editorMode);
+                ui.GameEnd(isSuccess, star, snow_remain, moveCount, customMode, editorMode , 0);
             }
         }
 
@@ -829,7 +837,7 @@ public class GameController : MonoBehaviour
 
     private void OnDestroy()
     {
-        MoPubManager.OnInterstitialLoadedEvent -= InterstitialLoadCallback;
+        //MoPubManager.OnInterstitialLoadedEvent -= InterstitialLoadCallback;
     }
 
 }

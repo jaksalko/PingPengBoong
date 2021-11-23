@@ -2,15 +2,42 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UniRx;
+using UniRx.Triggers;
+
 public class Store : MonoBehaviour
 {
     public Button[] tapButton; // skin block boong heart
     public GameObject[] storeView;
     public GameObject[] powders;
 
+    public Button rewardAdsButton;
+    public Text rewardAdsText;
+
     private void Awake()
     {
 
+    }
+
+    private void Start()
+    {
+
+    }
+
+    private void Update()
+    {
+        if(GoogleAdsManager.instance.canRewarded)
+        {
+            rewardAdsButton.interactable = true;
+            rewardAdsText.gameObject.SetActive(false);
+        }
+        else
+        {
+            rewardAdsButton.interactable = false;
+            rewardAdsText.gameObject.SetActive(true);
+            rewardAdsText.text = IntToTime(GoogleAdsManager.instance.rewardAdsTime);
+            
+        }
     }
 
     public void TapButtonClicked(int num)
@@ -68,4 +95,25 @@ public class Store : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    string IntToTime(int time)
+    {
+        string time_string = "";
+        int min = 0;
+        int sec = 0;
+        while(time != 0)
+        {
+            if(time >= 60)
+            {
+                time -= 60;
+                min++;
+            }
+            else
+            {
+                sec = time;
+                time = 0;
+            }
+        }
+        time_string = min + ":" + sec;
+        return time_string;
+    }
 }

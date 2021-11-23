@@ -16,7 +16,7 @@ static class Constants
     public const string SkinStorePath = "Sprite/Store/Skin/";
     public const string RoomDecoPath = "Sprite/RoomResource/";
 
-
+    public const int StartRewardAdsTime = 300;
 
     public static string[] FULL_TEST = {
        "24534e1901884e398f1253216226017e"
@@ -90,4 +90,18 @@ static class Constants
         //"ca-app-pub-8344778654571559/6652941280"
     };
 
+    public static string GoogleAdsIOSBannerAdId = "ca-app-pub-8344778654571559/9279104620";
+    public static string GoogleAdsAndroidBannerAdId = "ca-app-pub-8344778654571559/4432960296";
+
+    public static string GoogleAdsIOSInterstitialAdId = "ca-app-pub-8344778654571559/7966022957";
+    public static string GoogleAdsAndroidInterstitialAdId = "ca-app-pub-8344778654571559/9493715282";
+
+    public static string GoogleAdsIOSRewardAdId = "ca-app-pub-8344778654571559/6652941280";
+    public static string GoogleAdsAndroidRewardAdId = "ca-app-pub-8344778654571559/2905267968";
+
+    public static string GoogleAdsAndroidTestBannerId = "ca-app-pub-3940256099942544/6300978111";
+    public static string GoogleAdsAndroidTestInterstitialAdId = "ca-app-pub-3940256099942544/1033173712";
+
+    public static string GoogleAdsIOSTestBannerId = "ca-app-pub-3940256099942544/2934735716";
+    public static string GoogleAdsIOSTestInterstitialAdId = "ca-app-pub-3940256099942544/4411468910";
 }

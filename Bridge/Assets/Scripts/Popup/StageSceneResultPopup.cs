@@ -25,15 +25,20 @@ public class StageSceneResultPopup : UIPrefab
 
     public AudioSource successAudio;
 
+    public Text boongAmountText;
+    public GameObject rewardAdButton;
     bool clicked = false;
-    public void ShowResultPopup(bool isSuccess,int remain_snow,int move_count , int star_count)
+    public void ShowResultPopup(bool isSuccess,int remain_snow,int move_count , int star_count, int getBoongAmount)
     {
         gameObject.SetActive(true);
+        int beforeUserBoongAmount = XMLManager.ins.database.userInfo.boong;
+        boongAmountText.text = beforeUserBoongAmount.ToString();
+
         stageText.text = "STAGE " + GameManager.instance.stageDataOnPlay.GetStageText();
 
         if(isSuccess)
         {
-            
+            rewardAdButton.SetActive(true);
 
             stageText.transform.SetParent(successPopup.transform, false);
             buttons.SetParent(successPopup.transform, false);
@@ -66,6 +71,7 @@ public class StageSceneResultPopup : UIPrefab
         }
         else
         {
+            rewardAdButton.SetActive(false);
             stageText.transform.SetParent(failPopup.transform, false);
             buttons.SetParent(failPopup.transform, false);
 
@@ -141,6 +147,27 @@ public class StageSceneResultPopup : UIPrefab
         }
     }
        
+    public void RewardAdClicked()
+    {
+        GoogleAdsManager.instance.RewardEvent.AddListener(GetAdReward);
+        GoogleAdsManager.instance.ShowRewardAd();
+        rewardAdButton.SetActive(false);
+    }
 
-   
+    void GetAdReward()
+    {
+        int getBoongAmount = 200 + gameManager.stageDataOnPlay.GetIslandNumber() * 50;
+        getBoongAmount = getBoongAmount / 2;
+        XMLManager.ins.database.userInfo.boong += getBoongAmount;
+        XMLManager.ins.database.userHistory.boong_get += getBoongAmount;
+        boongAmountText.text = XMLManager.ins.database.userInfo.boong.ToString();
+
+
+    }
+
+    private void OnDestroy()
+    {
+        GoogleAdsManager.instance.RewardEvent.RemoveListener(GetAdReward);
+    }
+
 }

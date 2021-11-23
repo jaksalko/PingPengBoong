@@ -95,9 +95,9 @@ public class UiController : UIScript
 
     }
 
-    public void GameEnd(bool isSuccess, int star,int remain_snow, int moveCount, bool custom , bool editor)
+    public void GameEnd(bool isSuccess, int star,int remain_snow, int moveCount, bool custom , bool editor, int getBoongAmount)
     {
-        //inGame.SetActive(false);
+        inGame.SetActive(false);
         //SetMoveCountText(moveCount);
 
         //infinite --> 종료 팝업 선택 버튼 : 다음 맵 / 로비로?
@@ -116,7 +116,7 @@ public class UiController : UIScript
         }
         else
         {
-            stageSceneResultPopup.ShowResultPopup(isSuccess,remain_snow, moveCount , star_count : star);
+            stageSceneResultPopup.ShowResultPopup(isSuccess,remain_snow, moveCount , star_count : star , getBoongAmount);
         }
        
     }

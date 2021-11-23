@@ -1,7 +1,7 @@
 ﻿islandName,maxStar,myStar,islandInfo,islandText
 string,int,int,string,string
 tutorial_island,18,0,"튜토리얼 섬, 마쉬멜로우 펭귄들의 고향",몽글망글 마쉬멜로우 빌리지
-icecream_island,90,0,아이스크림 섬,베리베리베리 아이스크림 힐즈
-parfait_island,90,0,"파르페 섬, 휴양지로 유명한 섬",트로피카나 파르페 리조트
-cracker_island,90,0,"크래커 섬, 도서관으로 유명한 섬",바삭크런키 크래커 도서관
-cottoncandy_island,90,0,솜사탕 섬,송송사르륵 솜사탕 아일랜드
+icecream_island,150,0,아이스크림 섬,베리베리베리 아이스크림 힐즈
+parfait_island,150,0,"파르페 섬, 휴양지로 유명한 섬",트로피카나 파르페 리조트
+cracker_island,150,0,"크래커 섬, 도서관으로 유명한 섬",바삭크런키 크래커 도서관
+cottoncandy_island,150,0,솜사탕 섬,송송사르륵 솜사탕 아일랜드
