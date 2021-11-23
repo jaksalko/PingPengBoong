@@ -540,12 +540,13 @@ public class GameController : MonoBehaviour
         UserInfo userInfo = xmlManager.database.userInfo;
         UserHistory userHistory = xmlManager.database.userHistory;
 
+        /*
         if(GoogleAdsManager.instance.isActivateInterstitialAd)
         {
             GoogleAdsManager.instance.ShowInterstitialAd();
 
         }
-
+        */
         if(customMode)
         {
 

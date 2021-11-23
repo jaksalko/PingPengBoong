@@ -36,9 +36,11 @@ public class StageSceneResultPopup : UIPrefab
 
         stageText.text = "STAGE " + GameManager.instance.stageDataOnPlay.GetStageText();
 
-        if(isSuccess)
+        rewardAdButton.SetActive(false);
+
+        if (isSuccess)
         {
-            rewardAdButton.SetActive(true);
+            //rewardAdButton.SetActive(true);
 
             stageText.transform.SetParent(successPopup.transform, false);
             buttons.SetParent(successPopup.transform, false);
@@ -71,7 +73,7 @@ public class StageSceneResultPopup : UIPrefab
         }
         else
         {
-            rewardAdButton.SetActive(false);
+            //rewardAdButton.SetActive(false);
             stageText.transform.SetParent(failPopup.transform, false);
             buttons.SetParent(failPopup.transform, false);
 

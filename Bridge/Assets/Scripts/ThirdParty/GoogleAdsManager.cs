@@ -43,7 +43,7 @@ public class GoogleAdsManager : MonoBehaviour
             .SetTestDeviceIds(deviceIds)
             .build();
         */
-        
+        /*
         RequestConfiguration requestConfiguration =
             new RequestConfiguration.Builder()
             .SetSameAppKeyEnabled(true).build();
@@ -51,7 +51,7 @@ public class GoogleAdsManager : MonoBehaviour
         
         MobileAds.Initialize(HandleInitCompleteAction);
         interstitialAdTimerCoroutine = StartCoroutine(InterstitialAdTimer());
-       
+        */
         //StartCoroutine(StartTimer());
     }
 
